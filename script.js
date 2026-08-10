@@ -222,6 +222,110 @@ const products = [
             "Playera personalizada de Nahuel.",
         sizes: ["M", "G", "XG"],
         colors: ["Negro"]
+    },
+
+
+    {
+        id: 17,
+        name: "Dragon Ball",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-17.jpg",
+        description:
+            "Playera personalizada de Dragon Ball.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 18,
+        name: "Bulma",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-18.jpg",
+        description:
+            "Playera personalizada de Bulma.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 19,
+        name: "Son Goku",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-19.jpg",
+        description:
+            "Playera personalizada de Son Goku.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 20,
+        name: "Dragon Ball",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-20.jpg",
+        description:
+            "Playera personalizada de Dragon Ball.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 21,
+        name: "Goku",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-21.jpg",
+        description:
+            "Playera personalizada de Goku.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 22,
+        name: "Goku",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-22.jpg",
+        description:
+            "Playera personalizada de Goku.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 23,
+        name: "Goku Shenlong",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-23.jpg",
+        description:
+            "Playera personalizada de Goku Shenlong.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 24,
+        name: "Boo",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-24.jpg",
+        description:
+            "Playera personalizada de Boo.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
     }
 
 ];
