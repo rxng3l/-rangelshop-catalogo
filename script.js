@@ -694,6 +694,136 @@ const products = [
             "Playera personalizada de Junior H con diseño al frente y espalda.",
         sizes: ["M", "G", "XG"],
         colors: ["Negro"]
+    },
+
+
+    {
+        id: 64,
+        name: "Peso Pluma",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-64.jpg",
+        description:
+            "Playera personalizada de Peso Pluma.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 65,
+        name: "Peso Pluma",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-65.jpg",
+        description:
+            "Playera personalizada de Peso Pluma.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 66,
+        name: "Peso Pluma",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-66.jpg",
+        description:
+            "Playera personalizada de Peso Pluma.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 67,
+        name: "Peso Pluma",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-67.jpg",
+        description:
+            "Playera personalizada de Peso Pluma.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 68,
+        name: "Peso Pluma",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-68.jpg",
+        description:
+            "Playera personalizada de Peso Pluma.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 69,
+        name: "Peso Pluma",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-69.jpg",
+        description:
+            "Playera personalizada de Peso Pluma.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 70,
+        name: "Peso Pluma",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-70.jpg",
+        description:
+            "Playera personalizada de Peso Pluma.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 71,
+        name: "Peso Pluma",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-71.jpg",
+        description:
+            "Playera personalizada de Peso Pluma.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 72,
+        name: "Peso Pluma",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-72.jpg",
+        description:
+            "Playera personalizada de Peso Pluma.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 73,
+        name: "Peso Pluma",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-73.jpg",
+        description:
+            "Playera personalizada de Peso Pluma.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
     }
 
 ];
