@@ -400,6 +400,18 @@ const mainNav =
     document.querySelector(".nav");
 
 
+const imageZoom =
+    document.getElementById("imageZoom");
+
+
+const imageZoomPicture =
+    document.getElementById("imageZoomPicture");
+
+
+const imageZoomClose =
+    document.getElementById("imageZoomClose");
+
+
 
 /* =========================================================
    ESTADO
@@ -920,6 +932,88 @@ modalOverlay.addEventListener(
 
 
 /* =========================================================
+   ZOOM DE IMAGEN
+========================================================= */
+
+modalImage.addEventListener(
+    "click",
+    () => {
+
+        imageZoomPicture.src =
+            modalImage.src;
+
+        imageZoomPicture.alt =
+            modalImage.alt;
+
+        imageZoomPicture.classList.remove(
+            "zoomed"
+        );
+
+        imageZoom.classList.add(
+            "show"
+        );
+
+        document.body.style.overflow =
+            "hidden";
+
+    }
+);
+
+
+imageZoomPicture.addEventListener(
+    "click",
+    () => {
+
+        imageZoomPicture.classList.toggle(
+            "zoomed"
+        );
+
+    }
+);
+
+
+function closeImageZoom() {
+
+    imageZoom.classList.remove(
+        "show"
+    );
+
+
+    imageZoomPicture.classList.remove(
+        "zoomed"
+    );
+
+
+    document.body.style.overflow =
+        "";
+
+}
+
+
+imageZoomClose.addEventListener(
+    "click",
+    closeImageZoom
+);
+
+
+imageZoom.addEventListener(
+    "click",
+    event => {
+
+        if (
+            event.target === imageZoom
+        ) {
+
+            closeImageZoom();
+
+        }
+
+    }
+);
+
+
+
+/* =========================================================
    ESC
 ========================================================= */
 
@@ -930,6 +1024,8 @@ document.addEventListener(
         if (
             event.key === "Escape"
         ) {
+
+            closeImageZoom();
 
             closeModal();
 
