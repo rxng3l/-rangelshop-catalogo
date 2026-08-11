@@ -326,6 +326,136 @@ const products = [
             "Playera personalizada de Boo.",
         sizes: ["M", "G", "XG"],
         colors: ["Negro"]
+    },
+
+
+    {
+        id: 25,
+        name: "Naruto",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-25.jpg",
+        description:
+            "Playera personalizada de Naruto.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 26,
+        name: "Naruto",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-26.jpg",
+        description:
+            "Playera personalizada de Naruto.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 27,
+        name: "Naruto",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-27.jpg",
+        description:
+            "Playera personalizada de Naruto.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 28,
+        name: "Naruto",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-28.jpg",
+        description:
+            "Playera personalizada de Naruto.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 29,
+        name: "Naruto",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-29.jpg",
+        description:
+            "Playera personalizada de Naruto.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 30,
+        name: "Naruto",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-30.jpg",
+        description:
+            "Playera personalizada de Naruto.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 31,
+        name: "Naruto",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-31.jpg",
+        description:
+            "Playera personalizada de Naruto.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 32,
+        name: "Naruto",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-32.jpg",
+        description:
+            "Playera personalizada de Naruto.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 33,
+        name: "Naruto",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-33.jpg",
+        description:
+            "Playera personalizada de Naruto.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 34,
+        name: "Naruto",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-34.jpg",
+        description:
+            "Playera personalizada de Naruto.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
     }
 
 ];
