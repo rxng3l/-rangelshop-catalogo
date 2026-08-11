@@ -1,626 +1,1043 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <meta
-        name="description"
-        content="RЯangelShop - Playeras personalizadas con diseños exclusivos."
-    >
-
-    <title>RЯangelShop | Playeras Personalizadas</title>
+/* =========================================================
+   RЯANGELSHOP
+   CATÁLOGO DE PLAYERAS PERSONALIZADAS
+========================================================= */
 
 
-    <!-- FUENTE -->
+/* =========================================================
+   WHATSAPP
+========================================================= */
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet"
-    >
+const whatsappNumber = "523327939622";
 
 
-    <!-- CSS -->
+/* =========================================================
+   PRODUCTOS
+========================================================= */
 
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
+const products = [
 
-</head>
-
-
-<body>
-
-
-    <!-- =================================================
-         HEADER
-    ================================================== -->
-
-    <header class="header">
-
-        <div class="container header-content">
+    {
+        id: 1,
+        name: "lamine yamal",
+        category: "Fútbol",
+        price: 220,
+        image: "img/playera-01.jpg",
+        description:
+            "Playera personalizada de lamine yamal.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
 
 
-            <a
-                href="#inicio"
-                class="brand"
-            >
-
-                <span class="brand-symbol">
-                    RЯ
-                </span>
-
-                <span>
-                    angelShop
-                </span>
-
-            </a>
+    {
+        id: 2,
+        name: "Playera Sport",
+        category: "Anime",
+        price: 299,
+        image: "img/playera-02.jpg",
+        description:
+            "Diseño deportivo de estilo moderno para uso casual o deportivo.",
+        sizes: ["CH", "M", "G", "XG"],
+        colors: ["Negro", "Blanco"]
+    },
 
 
-            <nav class="nav">
-
-                <a href="#inicio">
-                    Inicio
-                </a>
-
-                <a href="#catalogo">
-                    Catálogo
-                </a>
-
-                <a href="#personaliza">
-                    Personaliza
-                </a>
-
-                <a
-                    href="https://wa.me/523327939622?text=Hola%2C%20me%20interesa%20conocer%20sus%20playeras%20personalizadas."
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Contacto
-                </a>
-
-            </nav>
+    {
+        id: 3,
+        name: "Street Name",
+        category: "Personalizadas",
+        price: 329,
+        image: "img/playera-03.jpg",
+        description:
+            "Personaliza tu playera con nombre, número o texto.",
+        sizes: ["CH", "M", "G", "XG", "2XG"],
+        colors: ["Negro", "Blanco", "Rojo"]
+    },
 
 
-            <button
-                class="menu-button"
-                id="menuButton"
-                aria-label="Abrir menú"
-            >
-                ☰
-            </button>
-
-        </div>
-
-    </header>
-
-
-
-    <!-- =================================================
-         MAIN
-    ================================================== -->
-
-    <main>
+    {
+        id: 4,
+        name: "Urban Style",
+        category: "Nuevos",
+        price: 329,
+        image: "img/playera-04.jpg",
+        description:
+            "Diseño urbano inspirado en las tendencias actuales.",
+        sizes: ["CH", "M", "G", "XG"],
+        colors: ["Negro", "Blanco"]
+    },
 
 
-        <!-- HERO -->
-
-        <section
-            class="hero"
-            id="inicio"
-        >
-
-            <div class="hero-content">
-
-                <p class="eyebrow">
-                    RЯANGELSHOP
-                </p>
-
-
-                <h1>
-
-                    Playeras que llevan
-
-                    <span>
-                        tu estilo.
-                    </span>
-
-                </h1>
+    {
+        id: 5,
+        name: "Classic Black",
+        category: "Artistas",
+        price: 299,
+        image: "img/playera-05.jpg",
+        description:
+            "Playera con diseño de frase personalizada.",
+        sizes: ["CH", "M", "G", "XG"],
+        colors: ["Negro", "Blanco"]
+    },
 
 
-                <p class="hero-description">
+    {
+        id: 6,
+        name: "Team Edition",
+        category: "Fútbol",
+        price: 349,
+        image: "img/playera-06.jpg",
+        description:
+            "Diseño inspirado en jerseys y equipos.",
+        sizes: ["CH", "M", "G", "XG", "2XG"],
+        colors: ["Negro", "Blanco", "Rojo"]
+    },
 
-                    Diseños personalizados creados para ti.
-                    Elige tu diseño, color y talla.
 
-                </p>
+    {
+        id: 7,
+        name: "Street Premium",
+        category: "Nuevos",
+        price: 349,
+        image: "img/playera-07.jpg",
+        description:
+            "Diseño premium para un look urbano.",
+        sizes: ["CH", "M", "G", "XG"],
+        colors: ["Negro", "Blanco"]
+    },
 
 
-                <a
-                    href="#catalogo"
-                    class="primary-button"
-                >
+    {
+        id: 8,
+        name: "Tu Diseño",
+        category: "Personalizadas",
+        price: 399,
+        image: "img/playera-08.jpg",
+        description:
+            "Mándanos tu idea y creamos una playera personalizada.",
+        sizes: ["CH", "M", "G", "XG", "2XG"],
+        colors: ["Negro", "Blanco", "Rojo", "Azul"]
+    },
 
-                    Ver catálogo
 
-                    <span>
-                        →
-                    </span>
+    {
+        id: 9,
+        name: "Frase Motivacional",
+        category: "Artistas",
+        price: 279,
+        image: "img/playera-09.jpg",
+        description:
+            "Diseño con frase inspiradora para el día a día.",
+        sizes: ["CH", "M", "G", "XG"],
+        colors: ["Negro", "Blanco"]
+    },
 
-                </a>
+
+    {
+        id: 10,
+        name: "Retro Club",
+        category: "Fútbol",
+        price: 349,
+        image: "img/playera-10.jpg",
+        description:
+            "Diseño con inspiración retro estilo club de fútbol.",
+        sizes: ["CH", "M", "G", "XG", "2XG"],
+        colors: ["Negro", "Blanco", "Rojo"]
+    },
+
+
+    {
+        id: 11,
+        name: "Minimal Line",
+        category: "Nuevos",
+        price: 299,
+        image: "img/playera-11.jpg",
+        description:
+            "Diseño minimalista con líneas simples y estilo moderno.",
+        sizes: ["CH", "M", "G", "XG"],
+        colors: ["Negro", "Blanco"]
+    },
+
+
+    {
+        id: 12,
+        name: "Doble Cara",
+        category: "Personalizadas",
+        price: 379,
+        image: "img/playera-12.jpg",
+        description:
+            "Playera personalizada con diseño al frente y espalda.",
+        sizes: ["CH", "M", "G", "XG", "2XG"],
+        colors: ["Negro", "Blanco", "Azul"]
+    },
+
+
+    {
+        id: 13,
+        name: "Gignac",
+        category: "Fútbol",
+        price: 220,
+        image: "img/playera-13.jpg",
+        description:
+            "Playera personalizada de Gignac.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 14,
+        name: "Pedri",
+        category: "Fútbol",
+        price: 220,
+        image: "img/playera-14.jpg",
+        description:
+            "Playera personalizada de Pedri.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 15,
+        name: "Piojo Alvarado",
+        category: "Fútbol",
+        price: 220,
+        image: "img/playera-15.jpg",
+        description:
+            "Playera personalizada de Piojo Alvarado.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 16,
+        name: "Nahuel",
+        category: "Fútbol",
+        price: 220,
+        image: "img/playera-16.jpg",
+        description:
+            "Playera personalizada de Nahuel.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 17,
+        name: "Dragon Ball",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-17.jpg",
+        description:
+            "Playera personalizada de Dragon Ball.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 18,
+        name: "Bulma",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-18.jpg",
+        description:
+            "Playera personalizada de Bulma.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 19,
+        name: "Son Goku",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-19.jpg",
+        description:
+            "Playera personalizada de Son Goku.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 20,
+        name: "Dragon Ball",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-20.jpg",
+        description:
+            "Playera personalizada de Dragon Ball.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 21,
+        name: "Goku",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-21.jpg",
+        description:
+            "Playera personalizada de Goku.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 22,
+        name: "Goku",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-22.jpg",
+        description:
+            "Playera personalizada de Goku.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 23,
+        name: "Goku Shenlong",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-23.jpg",
+        description:
+            "Playera personalizada de Goku Shenlong.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 24,
+        name: "Boo",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-24.jpg",
+        description:
+            "Playera personalizada de Boo.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    }
+
+];
+
+
+
+/* =========================================================
+   ELEMENTOS
+========================================================= */
+
+const productsGrid =
+    document.getElementById("productsGrid");
+
+
+const searchInput =
+    document.getElementById("searchInput");
+
+
+const categoryButtons =
+    document.querySelectorAll(".category");
+
+
+const modal =
+    document.getElementById("productModal");
+
+
+const modalOverlay =
+    document.getElementById("modalOverlay");
+
+
+const modalClose =
+    document.getElementById("modalClose");
+
+
+const modalImage =
+    document.getElementById("modalImage");
+
+
+const modalTitle =
+    document.getElementById("modalTitle");
+
+
+const modalCategory =
+    document.getElementById("modalCategory");
+
+
+const modalPrice =
+    document.getElementById("modalPrice");
+
+
+const modalDescription =
+    document.getElementById("modalDescription");
+
+
+const modalSizes =
+    document.getElementById("modalSizes");
+
+
+const modalColors =
+    document.getElementById("modalColors");
+
+
+const modalWhatsapp =
+    document.getElementById("modalWhatsapp");
+
+
+const menuButton =
+    document.getElementById("menuButton");
+
+
+const mainNav =
+    document.querySelector(".nav");
+
+
+const imageZoom =
+    document.getElementById("imageZoom");
+
+
+const imageZoomPicture =
+    document.getElementById("imageZoomPicture");
+
+
+const imageZoomClose =
+    document.getElementById("imageZoomClose");
+
+
+
+/* =========================================================
+   ESTADO
+========================================================= */
+
+let currentCategory = "Todos";
+
+
+
+/* =========================================================
+   MENÚ MÓVIL
+========================================================= */
+
+menuButton.addEventListener(
+    "click",
+    () => {
+
+        mainNav.classList.toggle(
+            "nav-open"
+        );
+
+    }
+);
+
+
+mainNav.querySelectorAll("a").forEach(
+    link => {
+
+        link.addEventListener(
+            "click",
+            () => {
+
+                mainNav.classList.remove(
+                    "nav-open"
+                );
+
+            }
+        );
+
+    }
+);
+
+
+
+/* =========================================================
+   PLACEHOLDER
+========================================================= */
+
+function createPlaceholder(product) {
+
+    const canvas =
+        document.createElement("canvas");
+
+
+    canvas.width = 800;
+
+    canvas.height = 980;
+
+
+    const ctx =
+        canvas.getContext("2d");
+
+
+    ctx.fillStyle = "#eeeeeb";
+
+    ctx.fillRect(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+    );
+
+
+    ctx.beginPath();
+
+    ctx.arc(
+        400,
+        390,
+        190,
+        0,
+        Math.PI * 2
+    );
+
+
+    ctx.fillStyle = "#d7d7d2";
+
+    ctx.fill();
+
+
+    ctx.fillStyle = "#111";
+
+    ctx.textAlign = "center";
+
+
+    ctx.font =
+        "800 72px Arial";
+
+
+    ctx.fillText(
+        "RЯ",
+        400,
+        410
+    );
+
+
+    ctx.font =
+        "600 26px Arial";
+
+
+    ctx.fillStyle = "#555";
+
+
+    ctx.fillText(
+        product.name,
+        400,
+        690
+    );
+
+
+    ctx.font =
+        "500 18px Arial";
+
+
+    ctx.fillStyle = "#999";
+
+
+    ctx.fillText(
+        product.category.toUpperCase(),
+        400,
+        735
+    );
+
+
+    return canvas.toDataURL(
+        "image/png"
+    );
+
+}
+
+
+
+/* =========================================================
+   MOSTRAR PRODUCTOS
+========================================================= */
+
+function renderProducts() {
+
+    const search =
+        searchInput.value
+            .toLowerCase()
+            .trim();
+
+
+    const filteredProducts =
+        products.filter(
+            product => {
+
+
+                const matchesCategory =
+                    currentCategory === "Todos" ||
+                    product.category === currentCategory;
+
+
+                const matchesSearch =
+                    product.name
+                        .toLowerCase()
+                        .includes(search);
+
+
+                return (
+                    matchesCategory &&
+                    matchesSearch
+                );
+
+            }
+        );
+
+
+    productsGrid.innerHTML = "";
+
+
+    if (
+        filteredProducts.length === 0
+    ) {
+
+        productsGrid.innerHTML = `
+
+            <div class="no-products">
+
+                No encontramos diseños
+                con esa búsqueda.
 
             </div>
 
+        `;
 
-            <div class="hero-decoration">
-
-                <div class="circle circle-one"></div>
-
-                <div class="circle circle-two"></div>
-
-                <span>
-                    RЯ
-                </span>
-
-            </div>
-
-        </section>
+        return;
+    }
 
 
 
-        <!-- =================================================
-             CATÁLOGO
-        ================================================== -->
-
-        <section
-            class="catalog-section"
-            id="catalogo"
-        >
-
-            <div class="container">
+    filteredProducts.forEach(
+        product => {
 
 
-                <div class="section-heading">
-
-                    <div>
-
-                        <p class="eyebrow">
-                            COLECCIÓN
-                        </p>
-
-                        <h2>
-                            Nuestros diseños
-                        </h2>
-
-                    </div>
+            const card =
+                document.createElement(
+                    "article"
+                );
 
 
-                    <p>
+            card.className =
+                "product-card";
 
-                        Encuentra el diseño perfecto
-                        para tu próxima playera.
 
-                    </p>
+            const imageContainer =
+                document.createElement(
+                    "div"
+                );
+
+
+            imageContainer.className =
+                "product-image";
+
+
+            const image =
+                document.createElement(
+                    "img"
+                );
+
+
+            image.src =
+                product.image;
+
+
+            image.alt =
+                product.name;
+
+
+            image.loading =
+                "lazy";
+
+
+            image.onerror =
+                () => {
+
+                    image.onerror = null;
+
+                    image.src =
+                        createPlaceholder(
+                            product
+                        );
+
+                };
+
+
+            imageContainer.appendChild(
+                image
+            );
+
+
+
+            const info =
+                document.createElement(
+                    "div"
+                );
+
+
+            info.className =
+                "product-info";
+
+
+            info.innerHTML = `
+
+                <div class="product-category">
+
+                    ${product.category}
 
                 </div>
 
 
+                <div class="product-title">
 
-                <!-- BUSCADOR -->
-
-                <div class="catalog-tools">
-
-                    <div class="search-box">
-
-                        <span>
-                            ⌕
-                        </span>
-
-                        <input
-                            type="text"
-                            id="searchInput"
-                            placeholder="Buscar diseño..."
-                            autocomplete="off"
-                        >
-
-                    </div>
+                    ${product.name}
 
                 </div>
 
 
+                <div class="product-price">
 
-                <!-- CATEGORÍAS -->
-
-                <div
-                    class="categories"
-                    id="categories"
-                >
-
-                    <button
-                        class="category active"
-                        data-category="Todos"
-                    >
-                        Todos
-                    </button>
-
-
-                    <button
-                        class="category"
-                        data-category="Fútbol"
-                    >
-                        Fútbol
-                    </button>
-
-
-                    <button
-                        class="category"
-                        data-category="Anime"
-                    >
-                        Anime
-                    </button>
-
-
-                    <button
-                        class="category"
-                        data-category="Artistas"
-                    >
-                        Artistas
-                    </button>
-
-
-                    <button
-                        class="category"
-                        data-category="Personalizadas"
-                    >
-                        Personalizadas
-                    </button>
-
-
-                    <button
-                        class="category"
-                        data-category="Nuevos"
-                    >
-                        Nuevos
-                    </button>
+                    Desde $${product.price} MXN
 
                 </div>
 
+            `;
 
 
-                <!-- PRODUCTOS -->
+            card.appendChild(
+                imageContainer
+            );
 
-                <div
-                    class="products-grid"
-                    id="productsGrid"
-                >
-                </div>
 
+            card.appendChild(
+                info
+            );
 
-            </div>
 
-        </section>
 
+            card.addEventListener(
+                "click",
+                () => {
 
+                    openProduct(
+                        product
+                    );
 
-        <!-- =================================================
-             PERSONALIZACIÓN
-        ================================================== -->
+                }
+            );
 
-        <section
-            class="custom-section"
-            id="personaliza"
-        >
 
-            <div class="container">
+            productsGrid.appendChild(
+                card
+            );
 
-                <div class="custom-box">
+        }
+    );
 
+}
 
-                    <div>
 
-                        <p class="eyebrow">
-                            HAZLO TUYO
-                        </p>
 
+/* =========================================================
+   CATEGORÍAS
+========================================================= */
 
-                        <h2>
+categoryButtons.forEach(
+    button => {
 
-                            ¿Quieres algo
 
-                            <span>
-                                personalizado?
-                            </span>
+        button.addEventListener(
+            "click",
+            () => {
 
-                        </h2>
 
+                categoryButtons.forEach(
+                    item => {
 
-                        <p>
+                        item.classList.remove(
+                            "active"
+                        );
 
-                            Podemos adaptar nuestros diseños,
-                            agregar nombres, números, frases
-                            o crear una propuesta desde cero.
+                    }
+                );
 
-                        </p>
 
-                    </div>
+                button.classList.add(
+                    "active"
+                );
 
 
-                    <a
-                        href="https://wa.me/523327939622?text=Hola%2C%20quiero%20solicitar%20un%20dise%C3%B1o%20personalizado."
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="light-button"
-                    >
+                currentCategory =
+                    button.dataset.category;
 
-                        Solicitar diseño →
 
-                    </a>
+                renderProducts();
 
+            }
+        );
 
-                </div>
+    }
+);
 
-            </div>
 
-        </section>
 
+/* =========================================================
+   BUSCADOR
+========================================================= */
 
+searchInput.addEventListener(
+    "input",
+    () => {
 
-        <!-- =================================================
-             CONTACTO
-        ================================================== -->
+        renderProducts();
 
-        <section
-            class="contact-section"
-            id="contacto"
-        >
+    }
+);
 
-            <div class="container contact-content">
 
 
-                <p class="eyebrow">
-                    CONTACTO
-                </p>
+/* =========================================================
+   ABRIR PRODUCTO
+========================================================= */
 
+function openProduct(product) {
 
-                <h2>
 
-                    ¿Listo para crear
+    modalImage.onerror =
+        () => {
 
-                    <span>
-                        tu playera?
-                    </span>
+            modalImage.onerror = null;
 
-                </h2>
+            modalImage.src =
+                createPlaceholder(
+                    product
+                );
 
+        };
 
-                <p>
 
-                    Muéstranos el diseño que tienes
-                    en mente y hacemos realidad tu idea.
+    modalImage.src =
+        product.image;
 
-                </p>
 
+    modalImage.alt =
+        product.name;
 
-                <a
-                    href="https://wa.me/523327939622?text=Hola%2C%20me%20interesa%20conocer%20sus%20playeras%20personalizadas."
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="primary-button"
-                >
 
-                    Contactar
+    modalTitle.textContent =
+        product.name;
 
-                    <span>
-                        →
-                    </span>
 
-                </a>
+    modalCategory.textContent =
+        product.category;
 
 
-            </div>
+    modalPrice.textContent =
+        `Desde $${product.price} MXN`;
 
-        </section>
 
+    modalDescription.textContent =
+        product.description;
 
-    </main>
 
+    modalSizes.textContent =
+        product.sizes.join(
+            " · "
+        );
 
 
-    <!-- =================================================
-         FOOTER
-    ================================================== -->
+    modalColors.textContent =
+        product.colors.join(
+            " · "
+        );
 
-    <footer>
 
-        <div class="container footer-content">
 
+    /* =====================================================
+       WHATSAPP DEL PRODUCTO
+    ===================================================== */
 
-            <div class="brand footer-brand">
+    const message =
+        `Hola, me interesa la playera "${product.name}". Vi el diseño en el catálogo de RЯangelShop. ¿Me pueden dar información sobre disponibilidad, tallas y colores?`;
 
-                <span class="brand-symbol">
-                    RЯ
-                </span>
 
-                <span>
-                    angelShop
-                </span>
+    const whatsappURL =
+        `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
-            </div>
 
+    modalWhatsapp.href =
+        whatsappURL;
 
-            <p>
-                © 2026 RЯangelShop. Todos los derechos reservados.
-            </p>
 
+    modalWhatsapp.target =
+        "_blank";
 
-        </div>
 
-    </footer>
+    modalWhatsapp.rel =
+        "noopener noreferrer";
 
 
+    modalWhatsapp.textContent =
+        "Consultar por WhatsApp →";
 
-    <!-- =================================================
-         MODAL PRODUCTO
-    ================================================== -->
 
-    <div
-        class="modal"
-        id="productModal"
-    >
 
-        <div
-            class="modal-overlay"
-            id="modalOverlay"
-        >
-        </div>
+    /* ABRIR */
 
+    modal.classList.add(
+        "show"
+    );
 
-        <div class="modal-content">
 
+    document.body.style.overflow =
+        "hidden";
 
-            <button
-                class="modal-close"
-                id="modalClose"
-                aria-label="Cerrar"
-            >
-                ×
-            </button>
+}
 
 
-            <div class="modal-image">
 
-                <img
-                    id="modalImage"
-                    src=""
-                    alt=""
-                >
+/* =========================================================
+   CERRAR MODAL
+========================================================= */
 
-            </div>
+function closeModal() {
 
+    modal.classList.remove(
+        "show"
+    );
 
-            <div class="modal-info">
 
-                <p
-                    class="modal-category"
-                    id="modalCategory"
-                >
-                </p>
+    document.body.style.overflow =
+        "";
 
+}
 
-                <h2 id="modalTitle">
-                </h2>
 
+modalClose.addEventListener(
+    "click",
+    closeModal
+);
 
-                <p
-                    class="modal-price"
-                    id="modalPrice"
-                >
-                </p>
 
+modalOverlay.addEventListener(
+    "click",
+    closeModal
+);
 
-                <p
-                    class="modal-description"
-                    id="modalDescription"
-                >
-                </p>
 
 
-                <div class="modal-options">
+/* =========================================================
+   ZOOM DE IMAGEN
+========================================================= */
 
+modalImage.addEventListener(
+    "click",
+    () => {
 
-                    <div>
+        imageZoomPicture.src =
+            modalImage.src;
 
-                        <strong>
-                            Tallas
-                        </strong>
+        imageZoomPicture.alt =
+            modalImage.alt;
 
-                        <p id="modalSizes">
-                        </p>
+        imageZoomPicture.classList.remove(
+            "zoomed"
+        );
 
-                    </div>
+        imageZoom.classList.add(
+            "show"
+        );
 
+        document.body.style.overflow =
+            "hidden";
 
-                    <div>
+    }
+);
 
-                        <strong>
-                            Colores
-                        </strong>
 
-                        <p id="modalColors">
-                        </p>
+imageZoomPicture.addEventListener(
+    "click",
+    () => {
 
-                    </div>
+        imageZoomPicture.classList.toggle(
+            "zoomed"
+        );
 
+    }
+);
 
-                </div>
 
+function closeImageZoom() {
 
-                <a
-                    href="#"
-                    class="primary-button modal-button"
-                    id="modalWhatsapp"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
+    imageZoom.classList.remove(
+        "show"
+    );
 
-                    Consultar por WhatsApp →
 
-                </a>
+    imageZoomPicture.classList.remove(
+        "zoomed"
+    );
 
 
-            </div>
+    document.body.style.overflow =
+        "";
 
+}
 
-        </div>
 
-    </div>
+imageZoomClose.addEventListener(
+    "click",
+    closeImageZoom
+);
 
 
+imageZoom.addEventListener(
+    "click",
+    event => {
 
-    <!-- =================================================
-         BOTÓN FLOTANTE WHATSAPP
-    ================================================== -->
+        if (
+            event.target === imageZoom
+        ) {
 
-    <a
-        href="https://wa.me/523327939622?text=Hola%2C%20me%20interesa%20conocer%20sus%20playeras%20personalizadas."
-        target="_blank"
-        rel="noopener noreferrer"
-        class="whatsapp-float"
-        aria-label="Contactar por WhatsApp"
-    >
+            closeImageZoom();
 
-        <span class="whatsapp-icon">
-            W
-        </span>
+        }
 
-        <span class="whatsapp-text">
-            WhatsApp
-        </span>
+    }
+);
 
-    </a>
 
 
+/* =========================================================
+   ESC
+========================================================= */
 
-    <!-- JAVASCRIPT -->
+document.addEventListener(
+    "keydown",
+    event => {
 
-    <script src="script.js"></script>
+        if (
+            event.key === "Escape"
+        ) {
 
+            closeImageZoom();
 
-</body>
+            closeModal();
 
-</html>
+        }
+
+    }
+);
+
+
+
+/* =========================================================
+   INICIAR
+========================================================= */
+
+renderProducts();
