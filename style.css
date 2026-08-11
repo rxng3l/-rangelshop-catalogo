@@ -1480,6 +1480,152 @@ footer {
     object-fit:
         cover;
 
+    cursor:
+        zoom-in;
+
+}
+
+
+
+/* =====================================================
+   ZOOM DE IMAGEN
+===================================================== */
+
+.image-zoom {
+
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    z-index:
+        3000;
+
+    display:
+        none;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    background:
+        rgba(
+            0,
+            0,
+            0,
+            0.94
+        );
+
+    overflow:
+        auto;
+
+    touch-action:
+        pinch-zoom;
+
+}
+
+
+.image-zoom.show {
+
+    display:
+        flex;
+
+}
+
+
+.image-zoom img {
+
+    max-width:
+        95%;
+
+    max-height:
+        95%;
+
+    object-fit:
+        contain;
+
+    cursor:
+        zoom-in;
+
+    transition:
+        transform
+        0.3s ease;
+
+    touch-action:
+        pinch-zoom;
+
+    user-select:
+        none;
+
+}
+
+
+.image-zoom img.zoomed {
+
+    max-width:
+        none;
+
+    max-height:
+        none;
+
+    width:
+        auto;
+
+    height:
+        auto;
+
+    transform:
+        scale(2);
+
+    cursor:
+        zoom-out;
+
+}
+
+
+.image-zoom-close {
+
+    position:
+        fixed;
+
+    top:
+        18px;
+
+    right:
+        18px;
+
+    z-index:
+        5;
+
+    width:
+        42px;
+
+    height:
+        42px;
+
+    border:
+        none;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.92
+        );
+
+    font-size:
+        26px;
+
+    cursor:
+        pointer;
+
 }
 
 
