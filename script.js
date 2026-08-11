@@ -573,6 +573,127 @@ const products = [
             "Playera personalizada de One Piece.",
         sizes: ["M", "G", "XG"],
         colors: ["Negro"]
+    },
+
+
+    {
+        id: 55,
+        name: "Junior H",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-55.jpg",
+        description:
+            "Playera personalizada de Junior H.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 56,
+        name: "Junior H",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-56.jpg",
+        description:
+            "Playera personalizada de Junior H.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 57,
+        name: "Junior H",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-57.jpg",
+        description:
+            "Playera personalizada de Junior H.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 58,
+        name: "Junior H",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-58.jpg",
+        description:
+            "Playera personalizada de Junior H.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 59,
+        name: "Junior H",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-59.jpg",
+        description:
+            "Playera personalizada de Junior H.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 60,
+        name: "Junior H",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-60.jpg",
+        imageBack: "img/playera-60-espalda.jpg",
+        description:
+            "Playera personalizada de Junior H con diseño al frente y espalda.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 61,
+        name: "Junior H",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-61.jpg",
+        imageBack: "img/playera-61-espalda.jpg",
+        description:
+            "Playera personalizada de Junior H con diseño al frente y espalda.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 62,
+        name: "Junior H",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-62.jpg",
+        imageBack: "img/playera-62-espalda.jpg",
+        description:
+            "Playera personalizada de Junior H con diseño al frente y espalda.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 63,
+        name: "Junior H",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-63.jpg",
+        imageBack: "img/playera-63-espalda.jpg",
+        description:
+            "Playera personalizada de Junior H con diseño al frente y espalda.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
     }
 
 ];
@@ -659,12 +780,27 @@ const imageZoomClose =
     document.getElementById("imageZoomClose");
 
 
+const imageSides =
+    document.getElementById("imageSides");
+
+
+const sideFront =
+    document.getElementById("sideFront");
+
+
+const sideBack =
+    document.getElementById("sideBack");
+
+
 
 /* =========================================================
    ESTADO
 ========================================================= */
 
 let currentCategory = "Todos";
+
+
+let currentProduct = null;
 
 
 
@@ -1054,6 +1190,8 @@ searchInput.addEventListener(
 
 function openProduct(product) {
 
+    currentProduct = product;
+
 
     modalImage.onerror =
         () => {
@@ -1074,6 +1212,31 @@ function openProduct(product) {
 
     modalImage.alt =
         product.name;
+
+
+    if (
+        product.imageBack
+    ) {
+
+        imageSides.classList.add(
+            "show"
+        );
+
+        sideFront.classList.add(
+            "active"
+        );
+
+        sideBack.classList.remove(
+            "active"
+        );
+
+    } else {
+
+        imageSides.classList.remove(
+            "show"
+        );
+
+    }
 
 
     modalTitle.textContent =
@@ -1174,6 +1337,70 @@ modalClose.addEventListener(
 modalOverlay.addEventListener(
     "click",
     closeModal
+);
+
+
+
+/* =========================================================
+   FRENTE / ESPALDA
+========================================================= */
+
+sideFront.addEventListener(
+    "click",
+    () => {
+
+        if (
+            !currentProduct
+        ) {
+
+            return;
+
+        }
+
+
+        modalImage.src =
+            currentProduct.image;
+
+
+        sideFront.classList.add(
+            "active"
+        );
+
+        sideBack.classList.remove(
+            "active"
+        );
+
+    }
+);
+
+
+sideBack.addEventListener(
+    "click",
+    () => {
+
+        if (
+            !currentProduct ||
+            !currentProduct.imageBack
+        ) {
+
+            return;
+
+        }
+
+
+        modalImage.src =
+            currentProduct.imageBack;
+
+
+        sideBack.classList.add(
+            "active"
+        );
+
+        sideFront.classList.remove(
+            "active"
+        );
+
+    }
 );
 
 
