@@ -313,6 +313,123 @@ const products = [
             "Playera personalizada de Naruto.",
         sizes: ["M", "G", "XG"],
         colors: ["Negro"]
+    },
+
+
+    {
+        id: 35,
+        name: "Natanael Cano",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-35.jpg",
+        description:
+            "Playera personalizada de Natanael Cano.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 36,
+        name: "Natanael Cano",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-36.jpg",
+        description:
+            "Playera personalizada de Natanael Cano.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 37,
+        name: "Natanael Cano",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-37.jpg",
+        description:
+            "Playera personalizada de Natanael Cano.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 38,
+        name: "Natanael Cano",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-38.jpg",
+        description:
+            "Playera personalizada de Natanael Cano.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 39,
+        name: "Natanael Cano",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-39.jpg",
+        description:
+            "Playera personalizada de Natanael Cano.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 40,
+        name: "Natanael Cano",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-40.jpg",
+        description:
+            "Playera personalizada de Natanael Cano.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 41,
+        name: "Natanael Cano",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-41.jpg",
+        description:
+            "Playera personalizada de Natanael Cano.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 42,
+        name: "Natanael Cano",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-42.jpg",
+        description:
+            "Playera personalizada de Natanael Cano.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 43,
+        name: "Natanael Cano",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-43.jpg",
+        description:
+            "Playera personalizada de Natanael Cano.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
     }
 
 ];
