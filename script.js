@@ -759,6 +759,58 @@ const products = [
             "Playera personalizada de Peso Pluma.",
         sizes: ["M", "G", "XG"],
         colors: ["Negro"]
+    },
+
+
+    {
+        id: 74,
+        name: "Súper Campeones",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-74.jpg",
+        description:
+            "Playera personalizada de Súper Campeones.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 75,
+        name: "Súper Campeones",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-75.jpg",
+        description:
+            "Playera personalizada de Súper Campeones.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 76,
+        name: "Súper Campeones",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-76.jpg",
+        description:
+            "Playera personalizada de Súper Campeones.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 77,
+        name: "Súper Campeones",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-77.jpg",
+        description:
+            "Playera personalizada de Súper Campeones.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
     }
 
 ];
