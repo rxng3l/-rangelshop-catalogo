@@ -430,6 +430,149 @@ const products = [
             "Playera personalizada de Natanael Cano.",
         sizes: ["M", "G", "XG"],
         colors: ["Negro"]
+    },
+
+
+    {
+        id: 44,
+        name: "One Piece",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-44.jpg",
+        description:
+            "Playera personalizada de One Piece.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 45,
+        name: "One Piece",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-45.jpg",
+        description:
+            "Playera personalizada de One Piece.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 46,
+        name: "One Piece",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-46.jpg",
+        description:
+            "Playera personalizada de One Piece.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 47,
+        name: "One Piece",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-47.jpg",
+        description:
+            "Playera personalizada de One Piece.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 48,
+        name: "One Piece",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-48.jpg",
+        description:
+            "Playera personalizada de One Piece.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 49,
+        name: "One Piece",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-49.jpg",
+        description:
+            "Playera personalizada de One Piece.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 50,
+        name: "One Piece",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-50.jpg",
+        description:
+            "Playera personalizada de One Piece.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 51,
+        name: "One Piece",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-51.jpg",
+        description:
+            "Playera personalizada de One Piece.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 52,
+        name: "One Piece",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-52.jpg",
+        description:
+            "Playera personalizada de One Piece.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 53,
+        name: "One Piece",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-53.jpg",
+        description:
+            "Playera personalizada de One Piece.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 54,
+        name: "One Piece",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-54.jpg",
+        description:
+            "Playera personalizada de One Piece.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
     }
 
 ];
