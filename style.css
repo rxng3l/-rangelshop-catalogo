@@ -1447,6 +1447,9 @@ footer {
 
 .modal-image {
 
+    position:
+        relative;
+
     min-height:
         550px;
 
@@ -1465,6 +1468,97 @@ footer {
             #eeeeeb,
             #dcdcd8
         );
+
+}
+
+
+.image-sides {
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    bottom:
+        18px;
+
+    transform:
+        translateX(-50%);
+
+    z-index:
+        4;
+
+    display:
+        none;
+
+    gap:
+        8px;
+
+    padding:
+        5px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.9
+        );
+
+    border-radius:
+        30px;
+
+}
+
+
+.image-sides.show {
+
+    display:
+        flex;
+
+}
+
+
+.side-button {
+
+    padding:
+        8px 18px;
+
+    border:
+        none;
+
+    border-radius:
+        30px;
+
+    background:
+        transparent;
+
+    color:
+        #555;
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+
+    cursor:
+        pointer;
+
+    transition:
+        0.25s;
+
+}
+
+
+.side-button.active {
+
+    background:
+        #000;
+
+    color:
+        white;
 
 }
 
