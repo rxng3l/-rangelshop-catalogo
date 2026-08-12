@@ -893,19 +893,6 @@ const products = [
 
 
     {
-        id: 84,
-        name: "Jujutsu Kaisen",
-        category: "Anime",
-        price: 220,
-        image: "img/playera-84.jpg",
-        description:
-            "Playera personalizada de Jujutsu Kaisen.",
-        sizes: ["M", "G", "XG"],
-        colors: ["Negro"]
-    },
-
-
-    {
         id: 85,
         name: "Bad Bunny",
         category: "Artistas",
@@ -978,6 +965,162 @@ const products = [
         image: "img/playera-90.jpg",
         description:
             "Playera personalizada de Bad Bunny.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 91,
+        name: "Travis Scott",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-91.jpg",
+        description:
+            "Playera personalizada de Travis Scott.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 92,
+        name: "Travis Scott",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-92.jpg",
+        description:
+            "Playera personalizada de Travis Scott.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 93,
+        name: "Travis Scott",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-93.jpg",
+        description:
+            "Playera personalizada de Travis Scott.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 94,
+        name: "Travis Scott",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-94.jpg",
+        description:
+            "Playera personalizada de Travis Scott.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 95,
+        name: "Travis Scott",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-95.jpg",
+        description:
+            "Playera personalizada de Travis Scott.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 96,
+        name: "Fuerza Regida",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-96.jpg",
+        description:
+            "Playera personalizada de Fuerza Regida.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 97,
+        name: "Fuerza Regida",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-97.jpg",
+        description:
+            "Playera personalizada de Fuerza Regida.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 98,
+        name: "Fuerza Regida",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-98.jpg",
+        description:
+            "Playera personalizada de Fuerza Regida.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 99,
+        name: "Fuerza Regida",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-99.jpg",
+        description:
+            "Playera personalizada de Fuerza Regida.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 100,
+        name: "Fuerza Regida",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-100.jpg",
+        description:
+            "Playera personalizada de Fuerza Regida.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 101,
+        name: "Fuerza Regida",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-101.jpg",
+        description:
+            "Playera personalizada de Fuerza Regida.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 102,
+        name: "Fuerza Regida",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-102.jpg",
+        description:
+            "Playera personalizada de Fuerza Regida.",
         sizes: ["M", "G", "XG"],
         colors: ["Negro"]
     }
