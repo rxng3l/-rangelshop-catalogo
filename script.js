@@ -811,6 +811,175 @@ const products = [
             "Playera personalizada de Súper Campeones.",
         sizes: ["M", "G", "XG"],
         colors: ["Negro"]
+    },
+
+
+    {
+        id: 78,
+        name: "Jujutsu Kaisen",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-78.jpg",
+        description:
+            "Playera personalizada de Jujutsu Kaisen.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 79,
+        name: "Jujutsu Kaisen",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-79.jpg",
+        description:
+            "Playera personalizada de Jujutsu Kaisen.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 80,
+        name: "Jujutsu Kaisen",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-80.jpg",
+        description:
+            "Playera personalizada de Jujutsu Kaisen.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 81,
+        name: "Jujutsu Kaisen",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-81.jpg",
+        description:
+            "Playera personalizada de Jujutsu Kaisen.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 82,
+        name: "Jujutsu Kaisen",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-82.jpg",
+        description:
+            "Playera personalizada de Jujutsu Kaisen.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 83,
+        name: "Jujutsu Kaisen",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-83.jpg",
+        description:
+            "Playera personalizada de Jujutsu Kaisen.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 84,
+        name: "Jujutsu Kaisen",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-84.jpg",
+        description:
+            "Playera personalizada de Jujutsu Kaisen.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 85,
+        name: "Bad Bunny",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-85.jpg",
+        description:
+            "Playera personalizada de Bad Bunny.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 86,
+        name: "Bad Bunny",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-86.jpg",
+        description:
+            "Playera personalizada de Bad Bunny.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 87,
+        name: "Bad Bunny",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-87.jpg",
+        description:
+            "Playera personalizada de Bad Bunny.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 88,
+        name: "Bad Bunny",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-88.jpg",
+        description:
+            "Playera personalizada de Bad Bunny.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 89,
+        name: "Bad Bunny",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-89.jpg",
+        description:
+            "Playera personalizada de Bad Bunny.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 90,
+        name: "Bad Bunny",
+        category: "Artistas",
+        price: 220,
+        image: "img/playera-90.jpg",
+        description:
+            "Playera personalizada de Bad Bunny.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
     }
 
 ];
