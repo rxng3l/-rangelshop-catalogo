@@ -1123,6 +1123,195 @@ const products = [
             "Playera personalizada de Fuerza Regida.",
         sizes: ["M", "G", "XG"],
         colors: ["Negro"]
+    },
+
+
+    {
+        id: 103,
+        name: "Demon Slayer",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-103.jpg",
+        description:
+            "Playera personalizada de Demon Slayer.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 104,
+        name: "Demon Slayer",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-104.jpg",
+        description:
+            "Playera personalizada de Demon Slayer.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 105,
+        name: "Demon Slayer",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-105.jpg",
+        description:
+            "Playera personalizada de Demon Slayer.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 106,
+        name: "Demon Slayer",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-106.jpg",
+        description:
+            "Playera personalizada de Demon Slayer.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 107,
+        name: "Demon Slayer",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-107.jpg",
+        description:
+            "Playera personalizada de Demon Slayer.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 108,
+        name: "Demon Slayer",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-108.jpg",
+        description:
+            "Playera personalizada de Demon Slayer.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 109,
+        name: "Demon Slayer",
+        category: "Anime",
+        price: 220,
+        image: "img/playera-109.jpg",
+        description:
+            "Playera personalizada de Demon Slayer.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 110,
+        name: "Carros",
+        category: "Carros",
+        price: 220,
+        image: "img/playera-110.jpg",
+        imageBack: "img/playera-110-espalda.jpg",
+        description:
+            "Playera personalizada de carros con diseño al frente y espalda.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 111,
+        name: "Carros",
+        category: "Carros",
+        price: 220,
+        image: "img/playera-111.jpg",
+        imageBack: "img/playera-111-espalda.jpg",
+        description:
+            "Playera personalizada de carros con diseño al frente y espalda.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 112,
+        name: "Carros",
+        category: "Carros",
+        price: 220,
+        image: "img/playera-112.jpg",
+        imageBack: "img/playera-112-espalda.jpg",
+        description:
+            "Playera personalizada de carros con diseño al frente y espalda.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 113,
+        name: "Carros",
+        category: "Carros",
+        price: 220,
+        image: "img/playera-113.jpg",
+        imageBack: "img/playera-113-espalda.jpg",
+        description:
+            "Playera personalizada de carros con diseño al frente y espalda.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 114,
+        name: "Carros",
+        category: "Carros",
+        price: 220,
+        image: "img/playera-114.jpg",
+        imageBack: "img/playera-114-espalda.jpg",
+        description:
+            "Playera personalizada de carros con diseño al frente y espalda.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 115,
+        name: "Carros",
+        category: "Carros",
+        price: 220,
+        image: "img/playera-115.jpg",
+        imageBack: "img/playera-115-espalda.jpg",
+        description:
+            "Playera personalizada de carros con diseño al frente y espalda.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 116,
+        name: "Carros",
+        category: "Carros",
+        price: 220,
+        image: "img/playera-116.jpg",
+        imageBack: "img/playera-116-espalda.jpg",
+        description:
+            "Playera personalizada de carros con diseño al frente y espalda.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
     }
 
 ];
