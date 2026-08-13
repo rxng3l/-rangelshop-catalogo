@@ -784,80 +784,197 @@
 
         <div class="size-guide-content">
 
-            <button
-                class="modal-close"
-                id="sizeGuideClose"
-                aria-label="Cerrar"
-            >
-                ×
-            </button>
+            <div class="size-guide-top">
+
+                <h3>
+                    Guía de tallas
+                </h3>
 
 
-            <h3>
-                Guía de tallas
-            </h3>
+                <button
+                    class="modal-close"
+                    id="sizeGuideClose"
+                    aria-label="Cerrar"
+                >
+                    ×
+                </button>
+
+            </div>
 
 
-            <p class="size-guide-note">
-                Medidas en centímetros. Playera puesta sobre una superficie plana.
-            </p>
+            <div class="size-guide-body">
 
 
-            <table class="size-guide-table">
+                <div class="size-guide-diagram">
 
-                <thead>
+                    <svg
+                        viewBox="0 0 260 260"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
 
-                    <tr>
+                        <path
+                            d="M85 30 L45 60 L60 85 L75 75 L75 220 L185 220 L185 75 L200 85 L215 60 L175 30 L160 45 L100 45 Z"
+                            fill="#f5f5f2"
+                            stroke="#999"
+                            stroke-width="2"
+                        />
 
-                        <th>Talla</th>
-                        <th>Ancho pecho</th>
-                        <th>Largo</th>
-
-                    </tr>
-
-                </thead>
-
-
-                <tbody>
-
-                    <tr>
-                        <td>CH</td>
-                        <td>46 cm</td>
-                        <td>66 cm</td>
-                    </tr>
-
-                    <tr>
-                        <td>M</td>
-                        <td>49 cm</td>
-                        <td>69 cm</td>
-                    </tr>
-
-                    <tr>
-                        <td>G</td>
-                        <td>52 cm</td>
-                        <td>72 cm</td>
-                    </tr>
-
-                    <tr>
-                        <td>XG</td>
-                        <td>55 cm</td>
-                        <td>75 cm</td>
-                    </tr>
-
-                    <tr>
-                        <td>2XG</td>
-                        <td>58 cm</td>
-                        <td>78 cm</td>
-                    </tr>
-
-                </tbody>
-
-            </table>
+                        <path
+                            d="M100 45 Q130 65 160 45"
+                            fill="none"
+                            stroke="#999"
+                            stroke-width="2"
+                        />
 
 
-            <p class="size-guide-note">
-                ¿Dudas para elegir tu talla? Pregúntanos directo por WhatsApp.
-            </p>
+                        <line
+                            x1="75"
+                            y1="100"
+                            x2="185"
+                            y2="100"
+                            stroke="#b99661"
+                            stroke-width="1.5"
+                        />
+
+                        <circle
+                            cx="130"
+                            cy="100"
+                            r="11"
+                            fill="#090909"
+                        />
+
+                        <text
+                            x="130"
+                            y="104"
+                            text-anchor="middle"
+                            fill="white"
+                            font-size="12"
+                            font-weight="800"
+                        >1</text>
+
+
+                        <line
+                            x1="220"
+                            y1="75"
+                            x2="220"
+                            y2="220"
+                            stroke="#b99661"
+                            stroke-width="1.5"
+                        />
+
+                        <circle
+                            cx="220"
+                            cy="147"
+                            r="11"
+                            fill="#090909"
+                        />
+
+                        <text
+                            x="220"
+                            y="151"
+                            text-anchor="middle"
+                            fill="white"
+                            font-size="12"
+                            font-weight="800"
+                        >2</text>
+
+                    </svg>
+
+
+                    <p class="diagram-caption">
+                        Cómo medir
+                    </p>
+
+                </div>
+
+
+                <div class="size-guide-data">
+
+                    <div
+                        class="unit-toggle"
+                        id="unitToggle"
+                    >
+
+                        <button
+                            class="unit-button active"
+                            data-unit="cm"
+                        >
+                            cm
+                        </button>
+
+
+                        <button
+                            class="unit-button"
+                            data-unit="in"
+                        >
+                            pulg
+                        </button>
+
+                    </div>
+
+
+                    <table class="size-guide-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Talla</th>
+
+                                <th>
+                                    <span class="th-number">1</span>
+                                    Ancho
+                                </th>
+
+                                <th>
+                                    <span class="th-number">2</span>
+                                    Largo
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            <tr>
+                                <td><strong>CH</strong></td>
+                                <td data-cm="45.7" data-in="18.0">45.7</td>
+                                <td data-cm="70.5" data-in="27.8">70.5</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>M</strong></td>
+                                <td data-cm="50.8" data-in="20.0">50.8</td>
+                                <td data-cm="73" data-in="28.7">73</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>G</strong></td>
+                                <td data-cm="55.9" data-in="22.0">55.9</td>
+                                <td data-cm="75.6" data-in="29.8">75.6</td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>XG</strong></td>
+                                <td data-cm="61" data-in="24.0">61</td>
+                                <td data-cm="78.1" data-in="30.7">78.1</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+
+                    <p class="size-guide-note">
+                        ¿Dudas para elegir tu talla? Pregúntanos directo por WhatsApp.
+                    </p>
+
+                </div>
+
+
+            </div>
 
         </div>
 
