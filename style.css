@@ -756,7 +756,24 @@ input {
         8px;
 
     margin-bottom:
-        35px;
+        20px;
+
+}
+
+
+.results-count {
+
+    margin-bottom:
+        20px;
+
+    color:
+        #999;
+
+    font-size:
+        12px;
+
+    font-weight:
+        600;
 
 }
 
@@ -1143,6 +1160,108 @@ input {
 
     line-height:
         1.8;
+
+}
+
+
+
+/* =====================================================
+   CÓMO COMPRAR
+===================================================== */
+
+.how-section {
+
+    padding-bottom:
+        120px;
+
+}
+
+
+.how-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap:
+        24px;
+
+}
+
+
+.how-card {
+
+    padding:
+        30px 24px;
+
+    border:
+        1px solid
+        var(--border);
+
+}
+
+
+.how-number {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    width:
+        34px;
+
+    height:
+        34px;
+
+    margin-bottom:
+        18px;
+
+    background:
+        #000;
+
+    color:
+        white;
+
+    font-size:
+        13px;
+
+    font-weight:
+        800;
+
+}
+
+
+.how-card h3 {
+
+    margin-bottom:
+        10px;
+
+    font-size:
+        16px;
+
+    letter-spacing:
+        -0.5px;
+
+}
+
+
+.how-card p {
+
+    color:
+        #777;
+
+    font-size:
+        13px;
+
+    line-height:
+        1.7;
 
 }
 
@@ -1850,6 +1969,160 @@ footer {
 
 
 /* =====================================================
+   GUÍA DE TALLAS
+===================================================== */
+
+.size-guide-link {
+
+    display:
+        inline-block;
+
+    margin-top:
+        10px;
+
+    padding:
+        0;
+
+    border:
+        none;
+
+    background:
+        none;
+
+    color:
+        var(--accent);
+
+    font-size:
+        11px;
+
+    font-weight:
+        700;
+
+    text-decoration:
+        underline;
+
+    cursor:
+        pointer;
+
+}
+
+
+.size-guide-content {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    width:
+        min(
+            460px,
+            calc(100% - 30px)
+        );
+
+    max-height:
+        85vh;
+
+    overflow:
+        auto;
+
+    padding:
+        45px 35px;
+
+    background:
+        white;
+
+    animation:
+        modalIn
+        0.3s ease;
+
+}
+
+
+.size-guide-content h3 {
+
+    font-size:
+        24px;
+
+    letter-spacing:
+        -1px;
+
+}
+
+
+.size-guide-note {
+
+    margin-top:
+        14px;
+
+    color:
+        #777;
+
+    font-size:
+        12px;
+
+    line-height:
+        1.7;
+
+}
+
+
+.size-guide-table {
+
+    width:
+        100%;
+
+    margin-top:
+        20px;
+
+    border-collapse:
+        collapse;
+
+    font-size:
+        13px;
+
+}
+
+
+.size-guide-table th,
+.size-guide-table td {
+
+    padding:
+        10px 8px;
+
+    border-bottom:
+        1px solid
+        var(--border);
+
+    text-align:
+        left;
+
+}
+
+
+.size-guide-table th {
+
+    color:
+        #999;
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        1px;
+
+    text-transform:
+        uppercase;
+
+}
+
+
+
+/* =====================================================
    WHATSAPP FLOTANTE
 ===================================================== */
 
@@ -1976,6 +2249,14 @@ footer {
     }
 
 
+    .how-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
     .hero-decoration {
 
         right:
@@ -1998,6 +2279,14 @@ footer {
                 calc(100% - 28px),
                 1180px
             );
+
+    }
+
+
+    .how-grid {
+
+        grid-template-columns:
+            1fr;
 
     }
 
