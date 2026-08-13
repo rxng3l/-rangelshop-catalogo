@@ -1312,6 +1312,110 @@ const products = [
             "Playera personalizada de carros con diseño al frente y espalda.",
         sizes: ["M", "G", "XG"],
         colors: ["Negro"]
+    },
+
+
+    {
+        id: 117,
+        name: "Messi",
+        category: "Fútbol",
+        price: 220,
+        image: "img/playera-117.jpg",
+        description:
+            "Playera personalizada de Messi.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 118,
+        name: "Messi",
+        category: "Fútbol",
+        price: 220,
+        image: "img/playera-118.jpg",
+        description:
+            "Playera personalizada de Messi.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 119,
+        name: "Messi",
+        category: "Fútbol",
+        price: 220,
+        image: "img/playera-119.jpg",
+        description:
+            "Playera personalizada de Messi.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 120,
+        name: "Messi",
+        category: "Fútbol",
+        price: 220,
+        image: "img/playera-120.jpg",
+        description:
+            "Playera personalizada de Messi.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 121,
+        name: "Messi",
+        category: "Fútbol",
+        price: 220,
+        image: "img/playera-121.jpg",
+        description:
+            "Playera personalizada de Messi.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 122,
+        name: "Gignac",
+        category: "Fútbol",
+        price: 220,
+        image: "img/playera-122.jpg",
+        description:
+            "Playera personalizada de Gignac.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 123,
+        name: "Gignac",
+        category: "Fútbol",
+        price: 220,
+        image: "img/playera-123.jpg",
+        description:
+            "Playera personalizada de Gignac.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 124,
+        name: "Gignac",
+        category: "Fútbol",
+        price: 220,
+        image: "img/playera-124.jpg",
+        description:
+            "Playera personalizada de Gignac.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
     }
 
 ];
