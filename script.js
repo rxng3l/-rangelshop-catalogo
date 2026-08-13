@@ -2095,6 +2095,66 @@ sizeGuideOverlay.addEventListener(
 
 
 /* =========================================================
+   UNIDADES DE MEDIDA (CM / PULG)
+========================================================= */
+
+const unitButtons =
+    document.querySelectorAll(".unit-button");
+
+
+const sizeCells =
+    document.querySelectorAll(
+        ".size-guide-table td[data-cm]"
+    );
+
+
+unitButtons.forEach(
+    button => {
+
+        button.addEventListener(
+            "click",
+            () => {
+
+                const unit =
+                    button.dataset.unit;
+
+
+                unitButtons.forEach(
+                    item => {
+
+                        item.classList.remove(
+                            "active"
+                        );
+
+                    }
+                );
+
+
+                button.classList.add(
+                    "active"
+                );
+
+
+                sizeCells.forEach(
+                    cell => {
+
+                        cell.textContent =
+                            unit === "in"
+                                ? cell.dataset.in
+                                : cell.dataset.cm;
+
+                    }
+                );
+
+            }
+        );
+
+    }
+);
+
+
+
+/* =========================================================
    ZOOM DE IMAGEN
 ========================================================= */
 
