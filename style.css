@@ -2017,18 +2017,15 @@ footer {
 
     width:
         min(
-            460px,
+            720px,
             calc(100% - 30px)
         );
 
     max-height:
-        85vh;
+        88vh;
 
     overflow:
         auto;
-
-    padding:
-        45px 35px;
 
     background:
         white;
@@ -2040,10 +2037,34 @@ footer {
 }
 
 
-.size-guide-content h3 {
+.size-guide-top {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    padding:
+        26px 30px;
+
+    border-bottom:
+        1px solid
+        var(--border);
+
+}
+
+
+.size-guide-top h3 {
+
+    position:
+        relative;
 
     font-size:
-        24px;
+        22px;
 
     letter-spacing:
         -1px;
@@ -2051,19 +2072,176 @@ footer {
 }
 
 
-.size-guide-note {
+.size-guide-top h3::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    bottom:
+        -8px;
+
+    width:
+        34px;
+
+    height:
+        3px;
+
+    background:
+        var(--accent);
+
+}
+
+
+.size-guide-top .modal-close {
+
+    position:
+        static;
+
+    background:
+        var(--gray-100);
+
+}
+
+
+.size-guide-body {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1.3fr;
+
+    gap:
+        0;
+
+}
+
+
+.size-guide-diagram {
+
+    padding:
+        30px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    background:
+        var(--gray-100);
+
+    border-right:
+        1px solid
+        var(--border);
+
+}
+
+
+.size-guide-diagram svg {
+
+    width:
+        100%;
+
+    max-width:
+        220px;
+
+}
+
+
+.diagram-caption {
 
     margin-top:
-        14px;
+        12px;
 
     color:
-        #777;
+        #999;
+
+    font-size:
+        11px;
+
+    font-weight:
+        600;
+
+}
+
+
+.size-guide-data {
+
+    padding:
+        30px;
+
+}
+
+
+.unit-toggle {
+
+    display:
+        inline-flex;
+
+    padding:
+        4px;
+
+    background:
+        var(--gray-100);
+
+    border-radius:
+        30px;
+
+}
+
+
+.unit-button {
+
+    padding:
+        8px 20px;
+
+    border:
+        none;
+
+    border-radius:
+        30px;
+
+    background:
+        transparent;
+
+    color:
+        #666;
 
     font-size:
         12px;
 
-    line-height:
-        1.7;
+    font-weight:
+        700;
+
+    cursor:
+        pointer;
+
+    transition:
+        0.25s;
+
+}
+
+
+.unit-button.active {
+
+    background:
+        #000;
+
+    color:
+        white;
 
 }
 
@@ -2074,7 +2252,7 @@ footer {
         100%;
 
     margin-top:
-        20px;
+        22px;
 
     border-collapse:
         collapse;
@@ -2089,7 +2267,7 @@ footer {
 .size-guide-table td {
 
     padding:
-        10px 8px;
+        12px 8px;
 
     border-bottom:
         1px solid
@@ -2102,6 +2280,15 @@ footer {
 
 
 .size-guide-table th {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        6px;
 
     color:
         #999;
@@ -2117,6 +2304,55 @@ footer {
 
     text-transform:
         uppercase;
+
+}
+
+
+.th-number {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    width:
+        16px;
+
+    height:
+        16px;
+
+    background:
+        var(--accent);
+
+    color:
+        white;
+
+    border-radius:
+        50%;
+
+    font-size:
+        9px;
+
+}
+
+
+.size-guide-note {
+
+    margin-top:
+        18px;
+
+    color:
+        #777;
+
+    font-size:
+        12px;
+
+    line-height:
+        1.7;
 
 }
 
@@ -2287,6 +2523,26 @@ footer {
 
         grid-template-columns:
             1fr;
+
+    }
+
+
+    .size-guide-body {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .size-guide-diagram {
+
+        border-right:
+            none;
+
+        border-bottom:
+            1px solid
+            var(--border);
 
     }
 
