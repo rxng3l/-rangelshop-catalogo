@@ -1326,6 +1326,10 @@ const productsGrid =
     document.getElementById("productsGrid");
 
 
+const resultsCount =
+    document.getElementById("resultsCount");
+
+
 const searchInput =
     document.getElementById("searchInput");
 
@@ -1408,6 +1412,22 @@ const sideFront =
 
 const sideBack =
     document.getElementById("sideBack");
+
+
+const sizeGuideLink =
+    document.getElementById("sizeGuideLink");
+
+
+const sizeGuideModal =
+    document.getElementById("sizeGuideModal");
+
+
+const sizeGuideOverlay =
+    document.getElementById("sizeGuideOverlay");
+
+
+const sizeGuideClose =
+    document.getElementById("sizeGuideClose");
 
 
 
@@ -1592,6 +1612,12 @@ function renderProducts() {
 
 
     productsGrid.innerHTML = "";
+
+
+    resultsCount.textContent =
+        filteredProducts.length === 1
+            ? "1 diseño encontrado"
+            : `${filteredProducts.length} diseños encontrados`;
 
 
     if (
@@ -2024,6 +2050,51 @@ sideBack.addEventListener(
 
 
 /* =========================================================
+   GUÍA DE TALLAS
+========================================================= */
+
+sizeGuideLink.addEventListener(
+    "click",
+    () => {
+
+        sizeGuideModal.classList.add(
+            "show"
+        );
+
+        document.body.style.overflow =
+            "hidden";
+
+    }
+);
+
+
+function closeSizeGuide() {
+
+    sizeGuideModal.classList.remove(
+        "show"
+    );
+
+
+    document.body.style.overflow =
+        "";
+
+}
+
+
+sizeGuideClose.addEventListener(
+    "click",
+    closeSizeGuide
+);
+
+
+sizeGuideOverlay.addEventListener(
+    "click",
+    closeSizeGuide
+);
+
+
+
+/* =========================================================
    ZOOM DE IMAGEN
 ========================================================= */
 
@@ -2118,6 +2189,8 @@ document.addEventListener(
         ) {
 
             closeImageZoom();
+
+            closeSizeGuide();
 
             closeModal();
 
