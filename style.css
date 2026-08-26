@@ -2359,6 +2359,183 @@ footer {
 
 
 /* =====================================================
+   SELECCIÓN DE CIUDAD
+===================================================== */
+
+.city-modal {
+
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    z-index:
+        4000;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        20px;
+
+    background:
+        rgba(
+            9,
+            9,
+            9,
+            0.94
+        );
+
+}
+
+
+.city-modal.hide {
+
+    display:
+        none;
+
+}
+
+
+.city-modal-content {
+
+    width:
+        min(
+            420px,
+            100%
+        );
+
+    padding:
+        50px 35px;
+
+    background:
+        white;
+
+    text-align:
+        center;
+
+    animation:
+        modalIn
+        0.3s ease;
+
+}
+
+
+.city-modal-symbol {
+
+    display:
+        block;
+
+    margin-bottom:
+        18px;
+
+    font-size:
+        32px;
+
+    font-weight:
+        900;
+
+}
+
+
+.city-modal-content h2 {
+
+    font-size:
+        22px;
+
+    letter-spacing:
+        -1px;
+
+    line-height:
+        1.2;
+
+}
+
+
+.city-modal-content p {
+
+    margin-top:
+        14px;
+
+    color:
+        #777;
+
+    font-size:
+        13px;
+
+    line-height:
+        1.6;
+
+}
+
+
+.city-options {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        10px;
+
+    margin-top:
+        30px;
+
+}
+
+
+.city-option {
+
+    padding:
+        16px;
+
+    border:
+        1px solid
+        var(--border);
+
+    background:
+        white;
+
+    color:
+        #111;
+
+    font-size:
+        13px;
+
+    font-weight:
+        700;
+
+    cursor:
+        pointer;
+
+    transition:
+        0.25s;
+
+}
+
+
+.city-option:hover {
+
+    background:
+        #000;
+
+    color:
+        white;
+
+}
+
+
+
+/* =====================================================
    WHATSAPP FLOTANTE
 ===================================================== */
 
