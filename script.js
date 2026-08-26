@@ -8,7 +8,13 @@
    WHATSAPP
 ========================================================= */
 
-const whatsappNumber = "528131046235";
+let whatsappNumber = "523327939622";
+
+
+const CITY_NUMBERS = {
+    guadalajara: "523327939622",
+    monterrey: "528131046235"
+};
 
 
 /* =========================================================
@@ -2359,6 +2365,74 @@ document.addEventListener(
             closeModal();
 
         }
+
+    }
+);
+
+
+
+/* =========================================================
+   SELECCIÓN DE CIUDAD
+========================================================= */
+
+const cityModal =
+    document.getElementById("cityModal");
+
+
+const cityOptions =
+    document.querySelectorAll(".city-option");
+
+
+document.body.style.overflow =
+    "hidden";
+
+
+function updateWhatsappLinks(number) {
+
+    whatsappNumber = number;
+
+
+    document.querySelectorAll(
+        'a[href*="wa.me/"]'
+    ).forEach(
+        link => {
+
+            link.href =
+                link.href.replace(
+                    /wa\.me\/\d+/,
+                    `wa.me/${number}`
+                );
+
+        }
+    );
+
+}
+
+
+cityOptions.forEach(
+    button => {
+
+        button.addEventListener(
+            "click",
+            () => {
+
+                updateWhatsappLinks(
+                    CITY_NUMBERS[
+                        button.dataset.city
+                    ]
+                );
+
+
+                cityModal.classList.add(
+                    "hide"
+                );
+
+
+                document.body.style.overflow =
+                    "";
+
+            }
+        );
 
     }
 );
