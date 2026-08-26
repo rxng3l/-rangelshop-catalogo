@@ -2647,6 +2647,76 @@ footer {
 }
 
 
+.city-float {
+
+    position:
+        fixed;
+
+    right:
+        24px;
+
+    bottom:
+        90px;
+
+    z-index:
+        1500;
+
+    width:
+        44px;
+
+    height:
+        44px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border:
+        none;
+
+    border-radius:
+        50%;
+
+    background:
+        #000;
+
+    color:
+        white;
+
+    font-size:
+        18px;
+
+    cursor:
+        pointer;
+
+    box-shadow:
+        0 10px 30px
+        rgba(
+            0,
+            0,
+            0,
+            0.18
+        );
+
+    transition:
+        0.3s;
+
+}
+
+
+.city-float:hover {
+
+    transform:
+        translateY(-4px);
+
+}
+
+
 
 /* =====================================================
    RESPONSIVE
@@ -3066,6 +3136,17 @@ footer {
 
         height:
             32px;
+
+    }
+
+
+    .city-float {
+
+        right:
+            16px;
+
+        bottom:
+            80px;
 
     }
 
