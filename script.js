@@ -2383,6 +2383,10 @@ const cityOptions =
     document.querySelectorAll(".city-option");
 
 
+const cityFloat =
+    document.getElementById("cityFloat");
+
+
 document.body.style.overflow =
     "hidden";
 
@@ -2433,6 +2437,22 @@ cityOptions.forEach(
 
             }
         );
+
+    }
+);
+
+
+cityFloat.addEventListener(
+    "click",
+    () => {
+
+        cityModal.classList.remove(
+            "hide"
+        );
+
+
+        document.body.style.overflow =
+            "hidden";
 
     }
 );
