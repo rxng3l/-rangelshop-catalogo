@@ -840,9 +840,158 @@ input {
 }
 
 
-.folder-card .product-info {
+.folder-card {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
 
     text-align:
+        center;
+
+}
+
+
+.folder-card .product-image {
+
+    width:
+        110px;
+
+    height:
+        110px;
+
+    aspect-ratio:
+        1;
+
+    border-radius:
+        50%;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        14px;
+
+    background:
+        white;
+
+    border:
+        1px solid
+        var(--border);
+
+    box-shadow:
+        0 8px 20px
+        rgba(
+            0,
+            0,
+            0,
+            0.06
+        );
+
+    transition:
+        transform
+        0.3s ease,
+        box-shadow
+        0.3s ease;
+
+}
+
+
+.folder-card:hover .product-image {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 14px 28px
+        rgba(
+            0,
+            0,
+            0,
+            0.12
+        );
+
+}
+
+
+.folder-card .product-image img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        contain;
+
+}
+
+
+.folder-card .product-image::after {
+
+    display:
+        none;
+
+}
+
+
+.folder-card .product-info {
+
+    padding:
+        0;
+
+    margin-top:
+        14px;
+
+    text-align:
+        center;
+
+}
+
+
+.folder-card .product-title {
+
+    font-size:
+        13px;
+
+}
+
+
+.folder-card .product-price {
+
+    color:
+        #999;
+
+    font-size:
+        11px;
+
+}
+
+
+.folder-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap:
+        26px;
+
+    justify-items:
         center;
 
 }
@@ -2802,6 +2951,14 @@ footer {
     }
 
 
+    .folder-grid {
+
+        grid-template-columns:
+            repeat(4, 1fr);
+
+    }
+
+
     .how-grid {
 
         grid-template-columns:
@@ -3064,6 +3221,17 @@ footer {
 
         gap:
             14px;
+
+    }
+
+
+    .folder-grid {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap:
+            16px;
 
     }
 
