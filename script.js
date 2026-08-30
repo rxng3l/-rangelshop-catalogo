@@ -1684,7 +1684,7 @@ function setThemedBackground(name) {
 
 
     catalogSection.style.backgroundImage =
-        `linear-gradient(rgba(255,255,255,0.93), rgba(255,255,255,0.93)), url("img/fondo-${slug}.jpg")`;
+        `linear-gradient(rgba(255,255,255,0.35), rgba(255,255,255,0.35)), url("img/fondo-${slug}.jpg")`;
 
     catalogSection.style.backgroundSize =
         "cover";
