@@ -38,6 +38,7 @@ const products = [
         category: "Fútbol",
         price: 220,
         image: "img/playera-01.jpg",
+        folder: "Barcelona",
         description:
             "Playera personalizada de lamine yamal.",
         sizes: ["M", "G", "XG"],
@@ -51,6 +52,7 @@ const products = [
         category: "Fútbol",
         price: 220,
         image: "img/playera-13.jpg",
+        folder: "Tigres",
         description:
             "Playera personalizada de Gignac.",
         sizes: ["M", "G", "XG"],
@@ -64,6 +66,7 @@ const products = [
         category: "Fútbol",
         price: 220,
         image: "img/playera-14.jpg",
+        folder: "Barcelona",
         description:
             "Playera personalizada de Pedri.",
         sizes: ["M", "G", "XG"],
@@ -77,6 +80,7 @@ const products = [
         category: "Fútbol",
         price: 220,
         image: "img/playera-15.jpg",
+        folder: "Chivas",
         description:
             "Playera personalizada de Piojo Alvarado.",
         sizes: ["M", "G", "XG"],
@@ -90,6 +94,7 @@ const products = [
         category: "Fútbol",
         price: 220,
         image: "img/playera-16.jpg",
+        folder: "Tigres",
         description:
             "Playera personalizada de Nahuel.",
         sizes: ["M", "G", "XG"],
@@ -1401,6 +1406,7 @@ const products = [
         category: "Fútbol",
         price: 220,
         image: "img/playera-122.jpg",
+        folder: "Tigres",
         description:
             "Playera personalizada de Gignac.",
         sizes: ["M", "G", "XG"],
@@ -1414,6 +1420,7 @@ const products = [
         category: "Fútbol",
         price: 220,
         image: "img/playera-123.jpg",
+        folder: "Tigres",
         description:
             "Playera personalizada de Gignac.",
         sizes: ["M", "G", "XG"],
@@ -1427,6 +1434,7 @@ const products = [
         category: "Fútbol",
         price: 220,
         image: "img/playera-124.jpg",
+        folder: "Tigres",
         description:
             "Playera personalizada de Gignac.",
         sizes: ["M", "G", "XG"],
@@ -1447,6 +1455,10 @@ const productsGrid =
 
 const resultsCount =
     document.getElementById("resultsCount");
+
+
+const backToFolders =
+    document.getElementById("backToFolders");
 
 
 const searchInput =
@@ -1557,6 +1569,16 @@ const sizeGuideClose =
 let currentCategory = "Todos";
 
 
+let currentFolder = null;
+
+
+const FOLDER_CATEGORIES = [
+    "Anime",
+    "Artistas",
+    "Fútbol"
+];
+
+
 let currentProduct = null;
 
 
@@ -1603,6 +1625,57 @@ mainNav.querySelectorAll("a").forEach(
 function getFinalPrice(product) {
 
     return product.price + priceAdjustment;
+
+}
+
+
+
+function slugify(text) {
+
+    return text
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/(^-|-$)/g, "");
+
+}
+
+
+
+function setThemedBackground(name) {
+
+    const catalogSection =
+        document.querySelector(".catalog-section");
+
+
+    if (
+        !name
+    ) {
+
+        catalogSection.style.backgroundImage =
+            "";
+
+        return;
+
+    }
+
+
+    const slug =
+        slugify(name);
+
+
+    catalogSection.style.backgroundImage =
+        `linear-gradient(rgba(255,255,255,0.93), rgba(255,255,255,0.93)), url("img/fondo-${slug}.jpg")`;
+
+    catalogSection.style.backgroundSize =
+        "cover";
+
+    catalogSection.style.backgroundPosition =
+        "center";
+
+    catalogSection.style.backgroundAttachment =
+        "fixed";
 
 }
 
@@ -1702,6 +1775,188 @@ function createPlaceholder(product) {
 
 
 /* =========================================================
+   MOSTRAR CARPETAS
+========================================================= */
+
+function renderFolders() {
+
+    const groups = {};
+
+
+    products
+        .filter(
+            product =>
+                product.category === currentCategory
+        )
+        .forEach(
+            product => {
+
+                const key =
+                    product.folder || product.name;
+
+
+                if (
+                    !groups[key]
+                ) {
+
+                    groups[key] = {
+                        name: key,
+                        image: product.image,
+                        count: 0
+                    };
+
+                }
+
+
+                groups[key].count++;
+
+            }
+        );
+
+
+    const folderList =
+        Object.values(groups);
+
+
+    productsGrid.innerHTML = "";
+
+
+    resultsCount.textContent =
+        folderList.length === 1
+            ? "1 grupo de diseños"
+            : `${folderList.length} grupos de diseños`;
+
+
+    folderList.forEach(
+        folder => {
+
+
+            const card =
+                document.createElement(
+                    "article"
+                );
+
+
+            card.className =
+                "product-card folder-card";
+
+
+            const imageContainer =
+                document.createElement(
+                    "div"
+                );
+
+
+            imageContainer.className =
+                "product-image";
+
+
+            const image =
+                document.createElement(
+                    "img"
+                );
+
+
+            image.src =
+                folder.image;
+
+
+            image.alt =
+                folder.name;
+
+
+            image.loading =
+                "lazy";
+
+
+            image.onerror =
+                () => {
+
+                    image.onerror = null;
+
+                    image.src =
+                        createPlaceholder({
+                            name: folder.name,
+                            category: currentCategory
+                        });
+
+                };
+
+
+            imageContainer.appendChild(
+                image
+            );
+
+
+            const info =
+                document.createElement(
+                    "div"
+                );
+
+
+            info.className =
+                "product-info";
+
+
+            info.innerHTML = `
+
+                <div class="product-title">
+
+                    ${folder.name}
+
+                </div>
+
+
+                <div class="product-price">
+
+                    ${folder.count} ${folder.count === 1 ? "diseño" : "diseños"}
+
+                </div>
+
+            `;
+
+
+            card.appendChild(
+                imageContainer
+            );
+
+
+            card.appendChild(
+                info
+            );
+
+
+            card.addEventListener(
+                "click",
+                () => {
+
+                    currentFolder =
+                        folder.name;
+
+
+                    setThemedBackground(
+                        folder.name
+                    );
+
+
+                    renderProducts();
+
+                }
+            );
+
+
+            productsGrid.appendChild(
+                card
+            );
+
+        }
+    );
+
+}
+
+
+
+/* =========================================================
    MOSTRAR PRODUCTOS
 ========================================================= */
 
@@ -1711,6 +1966,30 @@ function renderProducts() {
         searchInput.value
             .toLowerCase()
             .trim();
+
+
+    const showingFolders =
+        search === "" &&
+        FOLDER_CATEGORIES.includes(currentCategory) &&
+        !currentFolder;
+
+
+    backToFolders.classList.toggle(
+        "show",
+        FOLDER_CATEGORIES.includes(currentCategory) &&
+            !!currentFolder
+    );
+
+
+    if (
+        showingFolders
+    ) {
+
+        renderFolders();
+
+        return;
+
+    }
 
 
     const filteredProducts =
@@ -1723,6 +2002,11 @@ function renderProducts() {
                     product.category === currentCategory;
 
 
+                const matchesFolder =
+                    !currentFolder ||
+                    (product.folder || product.name) === currentFolder;
+
+
                 const matchesSearch =
                     product.name
                         .toLowerCase()
@@ -1731,6 +2015,7 @@ function renderProducts() {
 
                 return (
                     matchesCategory &&
+                    matchesFolder &&
                     matchesSearch
                 );
 
@@ -1930,10 +2215,38 @@ categoryButtons.forEach(
                     button.dataset.category;
 
 
+                currentFolder =
+                    null;
+
+
+                setThemedBackground(
+                    null
+                );
+
+
                 renderProducts();
 
             }
         );
+
+    }
+);
+
+
+backToFolders.addEventListener(
+    "click",
+    () => {
+
+        currentFolder =
+            null;
+
+
+        setThemedBackground(
+            null
+        );
+
+
+        renderProducts();
 
     }
 );
