@@ -1829,6 +1829,11 @@ function renderFolders() {
     productsGrid.innerHTML = "";
 
 
+    productsGrid.classList.add(
+        "folder-grid"
+    );
+
+
     resultsCount.textContent =
         folderList.length === 1
             ? "1 grupo de diseños"
@@ -1865,12 +1870,12 @@ function renderFolders() {
                 );
 
 
-            const coverImage =
-                `img/carpeta-${slugify(folder.name)}.jpg`;
+            const slug =
+                slugify(folder.name);
 
 
             image.src =
-                coverImage;
+                `img/carpeta-${slug}.png`;
 
 
             image.alt =
@@ -1887,19 +1892,28 @@ function renderFolders() {
                     image.onerror =
                         () => {
 
-                            image.onerror = null;
+                            image.onerror =
+                                () => {
+
+                                    image.onerror = null;
+
+                                    image.src =
+                                        createPlaceholder({
+                                            name: folder.name,
+                                            category: currentCategory
+                                        });
+
+                                };
+
 
                             image.src =
-                                createPlaceholder({
-                                    name: folder.name,
-                                    category: currentCategory
-                                });
+                                folder.image;
 
                         };
 
 
                     image.src =
-                        folder.image;
+                        `img/carpeta-${slug}.jpg`;
 
                 };
 
@@ -2045,6 +2059,11 @@ function renderProducts() {
 
 
     productsGrid.innerHTML = "";
+
+
+    productsGrid.classList.remove(
+        "folder-grid"
+    );
 
 
     resultsCount.textContent =
@@ -2824,4 +2843,3 @@ cityFloat.addEventListener(
 ========================================================= */
 
 renderProducts();
-                 
