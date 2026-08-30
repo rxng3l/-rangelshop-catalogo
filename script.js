@@ -17,6 +17,15 @@ const CITY_NUMBERS = {
 };
 
 
+let priceAdjustment = 0;
+
+
+const CITY_PRICE_ADJUSTMENT = {
+    guadalajara: 30,
+    monterrey: 0
+};
+
+
 /* =========================================================
    PRODUCTOS
 ========================================================= */
@@ -1591,6 +1600,14 @@ mainNav.querySelectorAll("a").forEach(
    PLACEHOLDER
 ========================================================= */
 
+function getFinalPrice(product) {
+
+    return product.price + priceAdjustment;
+
+}
+
+
+
 function createPlaceholder(product) {
 
     const canvas =
@@ -1839,7 +1856,7 @@ function renderProducts() {
 
                 <div class="product-price">
 
-                    Desde $${product.price} MXN
+                    Desde $${getFinalPrice(product)} MXN
 
                 </div>
 
@@ -2002,7 +2019,7 @@ function openProduct(product) {
 
 
     modalPrice.textContent =
-        `Desde $${product.price} MXN`;
+        `Desde $${getFinalPrice(product)} MXN`;
 
 
     modalDescription.textContent =
@@ -2420,11 +2437,20 @@ cityOptions.forEach(
             "click",
             () => {
 
+                const city =
+                    button.dataset.city;
+
+
                 updateWhatsappLinks(
-                    CITY_NUMBERS[
-                        button.dataset.city
-                    ]
+                    CITY_NUMBERS[city]
                 );
+
+
+                priceAdjustment =
+                    CITY_PRICE_ADJUSTMENT[city];
+
+
+                renderProducts();
 
 
                 cityModal.classList.add(
