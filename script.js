@@ -1657,6 +1657,16 @@ function setThemedBackground(name) {
         document.querySelector(".catalog-section");
 
 
+    const hero =
+        document.querySelector(".hero");
+
+
+    hero.classList.toggle(
+        "hide",
+        !!name
+    );
+
+
     if (
         !name
     ) {
