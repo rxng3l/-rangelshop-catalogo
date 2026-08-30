@@ -320,6 +320,14 @@ input {
 }
 
 
+.hero.hide {
+
+    display:
+        none;
+
+}
+
+
 .hero-content {
 
     width:
