@@ -1651,14 +1651,22 @@ function slugify(text) {
 
 
 
+const FOLDER_ACCENT_COLORS = {
+    "dragon-ball": "#f4c430"
+};
+
+
+const DEFAULT_ACCENT_COLOR = "#f4c430";
+
+
 function setThemedBackground(name) {
-
-    const catalogSection =
-        document.querySelector(".catalog-section");
-
 
     const hero =
         document.querySelector(".hero");
+
+
+    const header =
+        document.querySelector(".header");
 
 
     hero.classList.toggle(
@@ -1667,12 +1675,28 @@ function setThemedBackground(name) {
     );
 
 
+    header.classList.toggle(
+        "themed",
+        !!name
+    );
+
+
+    document.body.classList.toggle(
+        "is-themed",
+        !!name
+    );
+
+
     if (
         !name
     ) {
 
-        catalogSection.style.backgroundImage =
+        document.body.style.backgroundImage =
             "";
+
+        document.documentElement.style.removeProperty(
+            "--theme-accent"
+        );
 
         return;
 
@@ -1683,17 +1707,26 @@ function setThemedBackground(name) {
         slugify(name);
 
 
-    catalogSection.style.backgroundImage =
-        `linear-gradient(rgba(255,255,255,0.35), rgba(255,255,255,0.35)), url("img/fondo-${slug}.jpg")`;
+    document.body.style.backgroundImage =
+        `url("img/fondo-${slug}.jpg")`;
 
-    catalogSection.style.backgroundSize =
+    document.body.style.backgroundSize =
         "cover";
 
-    catalogSection.style.backgroundPosition =
-        "center";
+    document.body.style.backgroundPosition =
+        "center top";
 
-    catalogSection.style.backgroundAttachment =
+    document.body.style.backgroundAttachment =
         "fixed";
+
+    document.body.style.backgroundRepeat =
+        "no-repeat";
+
+
+    document.documentElement.style.setProperty(
+        "--theme-accent",
+        FOLDER_ACCENT_COLORS[slug] || DEFAULT_ACCENT_COLOR
+    );
 
 }
 
