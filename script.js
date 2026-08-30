@@ -108,6 +108,7 @@ const products = [
         category: "Anime",
         price: 220,
         image: "img/playera-17.jpg",
+        folder: "Dragon Ball",
         description:
             "Playera personalizada de Dragon Ball.",
         sizes: ["M", "G", "XG"],
@@ -121,6 +122,7 @@ const products = [
         category: "Anime",
         price: 220,
         image: "img/playera-18.jpg",
+        folder: "Dragon Ball",
         description:
             "Playera personalizada de Bulma.",
         sizes: ["M", "G", "XG"],
@@ -134,6 +136,7 @@ const products = [
         category: "Anime",
         price: 220,
         image: "img/playera-19.jpg",
+        folder: "Dragon Ball",
         description:
             "Playera personalizada de Son Goku.",
         sizes: ["M", "G", "XG"],
@@ -147,6 +150,7 @@ const products = [
         category: "Anime",
         price: 220,
         image: "img/playera-20.jpg",
+        folder: "Dragon Ball",
         description:
             "Playera personalizada de Dragon Ball.",
         sizes: ["M", "G", "XG"],
@@ -160,6 +164,7 @@ const products = [
         category: "Anime",
         price: 220,
         image: "img/playera-21.jpg",
+        folder: "Dragon Ball",
         description:
             "Playera personalizada de Goku.",
         sizes: ["M", "G", "XG"],
@@ -173,6 +178,7 @@ const products = [
         category: "Anime",
         price: 220,
         image: "img/playera-22.jpg",
+        folder: "Dragon Ball",
         description:
             "Playera personalizada de Goku.",
         sizes: ["M", "G", "XG"],
@@ -186,6 +192,7 @@ const products = [
         category: "Anime",
         price: 220,
         image: "img/playera-23.jpg",
+        folder: "Dragon Ball",
         description:
             "Playera personalizada de Goku Shenlong.",
         sizes: ["M", "G", "XG"],
@@ -199,6 +206,7 @@ const products = [
         category: "Anime",
         price: 220,
         image: "img/playera-24.jpg",
+        folder: "Dragon Ball",
         description:
             "Playera personalizada de Boo.",
         sizes: ["M", "G", "XG"],
@@ -1857,8 +1865,12 @@ function renderFolders() {
                 );
 
 
+            const coverImage =
+                `img/carpeta-${slugify(folder.name)}.jpg`;
+
+
             image.src =
-                folder.image;
+                coverImage;
 
 
             image.alt =
@@ -1872,13 +1884,22 @@ function renderFolders() {
             image.onerror =
                 () => {
 
-                    image.onerror = null;
+                    image.onerror =
+                        () => {
+
+                            image.onerror = null;
+
+                            image.src =
+                                createPlaceholder({
+                                    name: folder.name,
+                                    category: currentCategory
+                                });
+
+                        };
+
 
                     image.src =
-                        createPlaceholder({
-                            name: folder.name,
-                            category: currentCategory
-                        });
+                        folder.image;
 
                 };
 
@@ -2803,3 +2824,4 @@ cityFloat.addEventListener(
 ========================================================= */
 
 renderProducts();
+                 
