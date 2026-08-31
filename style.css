@@ -127,6 +127,59 @@ input {
         1px solid
         var(--border);
 
+    transition:
+        background
+        0.4s ease;
+
+}
+
+
+.header.themed {
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.4
+        );
+
+}
+
+
+body.is-themed .product-category,
+body.is-themed .product-title,
+body.is-themed .product-price {
+
+    color:
+        white;
+
+    text-shadow:
+        0 1px 4px
+        rgba(
+            0,
+            0,
+            0,
+            0.7
+        );
+
+}
+
+
+body.is-themed .results-count {
+
+    color:
+        white;
+
+    text-shadow:
+        0 1px 4px
+        rgba(
+            0,
+            0,
+            0,
+            0.7
+        );
+
 }
 
 
@@ -320,7 +373,10 @@ input {
 }
 
 
-.hero.hide {
+.hero.hide,
+.custom-section.hide,
+.how-section.hide,
+.contact-section.hide {
 
     display:
         none;
