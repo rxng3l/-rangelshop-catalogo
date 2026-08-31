@@ -1659,6 +1659,245 @@ const FOLDER_ACCENT_COLORS = {
 const DEFAULT_ACCENT_COLOR = "#f4c430";
 
 
+/* =========================================================
+   ANIMACIONES DE ENTRADA POR CARPETA
+========================================================= */
+
+const FOLDER_CONFETTI_COLORS = {
+    "chivas": ["#C8102E", "#FFFFFF"]
+};
+
+
+function fireConfetti(colors) {
+
+    const canvas =
+        document.createElement("canvas");
+
+
+    canvas.className =
+        "confetti-canvas";
+
+
+    document.body.appendChild(
+        canvas
+    );
+
+
+    const ctx =
+        canvas.getContext("2d");
+
+
+    canvas.width =
+        window.innerWidth;
+
+    canvas.height =
+        window.innerHeight;
+
+
+    const particleCount = 160;
+
+    const particles = [];
+
+
+    for (
+        let i = 0;
+        i < particleCount;
+        i++
+    ) {
+
+        particles.push({
+            x: canvas.width / 2 + (Math.random() - 0.5) * 260,
+            y: canvas.height * 0.18 + (Math.random() - 0.5) * 40,
+            vx: (Math.random() - 0.5) * 11,
+            vy: Math.random() * -7 - 3,
+            size: Math.random() * 8 + 4,
+            color: colors[
+                Math.floor(
+                    Math.random() * colors.length
+                )
+            ],
+            rotation: Math.random() * 360,
+            rotationSpeed: (Math.random() - 0.5) * 12,
+            gravity: 0.22 + Math.random() * 0.16
+        });
+
+    }
+
+
+    let frame = 0;
+
+    const maxFrames = 150;
+
+
+    function animate() {
+
+        frame++;
+
+
+        ctx.clearRect(
+            0,
+            0,
+            canvas.width,
+            canvas.height
+        );
+
+
+        particles.forEach(
+            particle => {
+
+                particle.vy +=
+                    particle.gravity;
+
+                particle.x +=
+                    particle.vx;
+
+                particle.y +=
+                    particle.vy;
+
+                particle.rotation +=
+                    particle.rotationSpeed;
+
+
+                const opacity =
+                    Math.max(
+                        0,
+                        1 - frame / maxFrames
+                    );
+
+
+                ctx.save();
+
+                ctx.globalAlpha =
+                    opacity;
+
+                ctx.translate(
+                    particle.x,
+                    particle.y
+                );
+
+                ctx.rotate(
+                    (particle.rotation * Math.PI) / 180
+                );
+
+                ctx.fillStyle =
+                    particle.color;
+
+                ctx.fillRect(
+                    -particle.size / 2,
+                    -particle.size / 4,
+                    particle.size,
+                    particle.size / 2
+                );
+
+                ctx.restore();
+
+            }
+        );
+
+
+        if (
+            frame < maxFrames
+        ) {
+
+            requestAnimationFrame(
+                animate
+            );
+
+        } else {
+
+            canvas.remove();
+
+        }
+
+    }
+
+
+    requestAnimationFrame(
+        animate
+    );
+
+}
+
+
+const FOLDER_ENTRY_ANIMATIONS = {
+    "spiderman": {
+        intro: "img/anim-spiderman.gif",
+        introDuration: 3000
+    }
+};
+
+
+function playIntroSwing(src, duration) {
+
+    const img =
+        document.createElement("img");
+
+
+    img.src =
+        src;
+
+
+    img.className =
+        "intro-swing";
+
+
+    img.style.animationDuration =
+        `${duration / 2}ms`;
+
+
+    document.body.appendChild(
+        img
+    );
+
+
+    setTimeout(
+        () => {
+
+            img.remove();
+
+        },
+        duration
+    );
+
+}
+
+
+function playFolderAnimation(name) {
+
+    const slug =
+        slugify(name);
+
+
+    if (
+        FOLDER_CONFETTI_COLORS[slug]
+    ) {
+
+        fireConfetti(
+            FOLDER_CONFETTI_COLORS[slug]
+        );
+
+    }
+
+
+    const entryConfig =
+        FOLDER_ENTRY_ANIMATIONS[slug];
+
+
+    if (
+        entryConfig &&
+        entryConfig.intro
+    ) {
+
+        playIntroSwing(
+            entryConfig.intro,
+            entryConfig.introDuration || 3000
+        );
+
+    }
+
+}
+
+
 function setThemedBackground(name) {
 
     const hero =
@@ -1800,6 +2039,11 @@ function openFolder(name) {
     );
 
 
+    playFolderAnimation(
+        name
+    );
+
+
     renderProducts();
 
 }
@@ -1845,6 +2089,11 @@ window.addEventListener(
 
 
             setThemedBackground(
+                state.rrFolder
+            );
+
+
+            playFolderAnimation(
                 state.rrFolder
             );
 
