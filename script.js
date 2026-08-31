@@ -1669,6 +1669,22 @@ function setThemedBackground(name) {
         document.querySelector(".header");
 
 
+    const catalogSection =
+        document.querySelector(".catalog-section");
+
+
+    const customSection =
+        document.querySelector(".custom-section");
+
+
+    const howSection =
+        document.querySelector(".how-section");
+
+
+    const contactSection =
+        document.querySelector(".contact-section");
+
+
     hero.classList.toggle(
         "hide",
         !!name
@@ -1677,6 +1693,24 @@ function setThemedBackground(name) {
 
     header.classList.toggle(
         "themed",
+        !!name
+    );
+
+
+    customSection.classList.toggle(
+        "hide",
+        !!name
+    );
+
+
+    howSection.classList.toggle(
+        "hide",
+        !!name
+    );
+
+
+    contactSection.classList.toggle(
+        "hide",
         !!name
     );
 
@@ -1691,7 +1725,10 @@ function setThemedBackground(name) {
         !name
     ) {
 
-        document.body.style.backgroundImage =
+        header.style.backgroundImage =
+            "";
+
+        catalogSection.style.backgroundImage =
             "";
 
         document.documentElement.style.removeProperty(
@@ -1707,20 +1744,30 @@ function setThemedBackground(name) {
         slugify(name);
 
 
-    document.body.style.backgroundImage =
+    const bgStyle =
         `url("img/fondo-${slug}.jpg")`;
 
-    document.body.style.backgroundSize =
-        "cover";
 
-    document.body.style.backgroundPosition =
-        "center top";
+    [header, catalogSection].forEach(
+        element => {
 
-    document.body.style.backgroundAttachment =
-        "fixed";
+            element.style.backgroundImage =
+                bgStyle;
 
-    document.body.style.backgroundRepeat =
-        "no-repeat";
+            element.style.backgroundSize =
+                "cover";
+
+            element.style.backgroundPosition =
+                "center top";
+
+            element.style.backgroundAttachment =
+                "fixed";
+
+            element.style.backgroundRepeat =
+                "no-repeat";
+
+        }
+    );
 
 
     document.documentElement.style.setProperty(
@@ -1729,6 +1776,95 @@ function setThemedBackground(name) {
     );
 
 }
+
+
+
+function openFolder(name) {
+
+    history.pushState(
+        {
+            rrFolder: name,
+            rrCategory: currentCategory
+        },
+        "",
+        ""
+    );
+
+
+    currentFolder =
+        name;
+
+
+    setThemedBackground(
+        name
+    );
+
+
+    renderProducts();
+
+}
+
+
+
+function closeFolder() {
+
+    currentFolder =
+        null;
+
+
+    setThemedBackground(
+        null
+    );
+
+
+    renderProducts();
+
+}
+
+
+
+window.addEventListener(
+    "popstate",
+    event => {
+
+        const state =
+            event.state;
+
+
+        if (
+            state &&
+            state.rrFolder
+        ) {
+
+            currentCategory =
+                state.rrCategory;
+
+
+            currentFolder =
+                state.rrFolder;
+
+
+            setThemedBackground(
+                state.rrFolder
+            );
+
+        } else {
+
+            currentFolder =
+                null;
+
+
+            setThemedBackground(
+                null
+            );
+
+        }
+
+
+        renderProducts();
+
+    }
+);
 
 
 
@@ -2008,16 +2144,9 @@ function renderFolders() {
                 "click",
                 () => {
 
-                    currentFolder =
-                        folder.name;
-
-
-                    setThemedBackground(
+                    openFolder(
                         folder.name
                     );
-
-
-                    renderProducts();
 
                 }
             );
@@ -2320,16 +2449,18 @@ backToFolders.addEventListener(
     "click",
     () => {
 
-        currentFolder =
-            null;
+        if (
+            history.state &&
+            history.state.rrFolder
+        ) {
 
+            history.back();
 
-        setThemedBackground(
-            null
-        );
+        } else {
 
+            closeFolder();
 
-        renderProducts();
+        }
 
     }
 );
