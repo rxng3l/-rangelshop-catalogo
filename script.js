@@ -1832,6 +1832,9 @@ const FOLDER_ENTRY_ANIMATIONS = {
 };
 
 
+let stickyOverlayTimeout = null;
+
+
 function setStickyOverlay(src) {
 
     let overlay =
@@ -1874,9 +1877,6 @@ function setStickyOverlay(src) {
         );
 
 
-        overlay.src =
-            "";
-
         return;
 
     }
@@ -1889,6 +1889,47 @@ function setStickyOverlay(src) {
     overlay.classList.add(
         "show"
     );
+
+}
+
+
+function hideStickyOverlay() {
+
+    clearTimeout(
+        stickyOverlayTimeout
+    );
+
+
+    setStickyOverlay(
+        null
+    );
+
+}
+
+
+function showStickyOverlayTimed(src, visibleDuration) {
+
+    clearTimeout(
+        stickyOverlayTimeout
+    );
+
+
+    setStickyOverlay(
+        src
+    );
+
+
+    stickyOverlayTimeout =
+        setTimeout(
+            () => {
+
+                setStickyOverlay(
+                    null
+                );
+
+            },
+            visibleDuration
+        );
 
 }
 
@@ -1961,7 +2002,29 @@ function playFolderAnimation(name) {
 
     }
 
+
+    if (
+        entryConfig &&
+        entryConfig.sticky
+    ) {
+
+        const introDuration =
+            entryConfig.introDuration || 3000;
+
+
+        const stickyExtra =
+            entryConfig.stickyExtraTime || 5000;
+
+
+        showStickyOverlayTimed(
+            entryConfig.sticky,
+            introDuration + stickyExtra
+        );
+
+    }
+
 }
+
 
 
 function setThemedBackground(name) {
@@ -2041,9 +2104,7 @@ function setThemedBackground(name) {
         );
 
 
-        setStickyOverlay(
-            null
-        );
+        hideStickyOverlay();
 
 
         return;
@@ -2084,17 +2145,6 @@ function setThemedBackground(name) {
     document.documentElement.style.setProperty(
         "--theme-accent",
         FOLDER_ACCENT_COLORS[slug] || DEFAULT_ACCENT_COLOR
-    );
-
-
-    const entryConfig =
-        FOLDER_ENTRY_ANIMATIONS[slug];
-
-
-    setStickyOverlay(
-        entryConfig && entryConfig.sticky
-            ? entryConfig.sticky
-            : null
     );
 
 }
