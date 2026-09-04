@@ -1583,7 +1583,8 @@ let currentFolder = null;
 const FOLDER_CATEGORIES = [
     "Anime",
     "Artistas",
-    "Fútbol"
+    "Fútbol",
+    "Películas/Series"
 ];
 
 
