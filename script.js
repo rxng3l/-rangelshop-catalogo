@@ -1664,7 +1664,10 @@ const DEFAULT_ACCENT_COLOR = "#f4c430";
 ========================================================= */
 
 const FOLDER_CONFETTI_COLORS = {
-    "chivas": ["#C8102E", "#FFFFFF"]
+    "chivas": ["#C8102E", "#FFFFFF"],
+    "barcelona": ["#004D98", "#D90429"],
+    "tigres": ["#FDB913", "#003DA5"],
+    "messi": ["#87CEEB", "#FFFFFF"]
 };
 
 
@@ -1694,7 +1697,7 @@ function fireConfetti(colors) {
         window.innerHeight;
 
 
-    const particleCount = 160;
+    const particleCount = 260;
 
     const particles = [];
 
@@ -1706,10 +1709,10 @@ function fireConfetti(colors) {
     ) {
 
         particles.push({
-            x: canvas.width / 2 + (Math.random() - 0.5) * 260,
-            y: canvas.height * 0.18 + (Math.random() - 0.5) * 40,
-            vx: (Math.random() - 0.5) * 11,
-            vy: Math.random() * -7 - 3,
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height - canvas.height,
+            vx: (Math.random() - 0.5) * 4,
+            vy: Math.random() * 4 + 2,
             size: Math.random() * 8 + 4,
             color: colors[
                 Math.floor(
@@ -1718,7 +1721,7 @@ function fireConfetti(colors) {
             ],
             rotation: Math.random() * 360,
             rotationSpeed: (Math.random() - 0.5) * 12,
-            gravity: 0.22 + Math.random() * 0.16
+            gravity: 0.08 + Math.random() * 0.08
         });
 
     }
@@ -1822,9 +1825,71 @@ function fireConfetti(colors) {
 const FOLDER_ENTRY_ANIMATIONS = {
     "spiderman": {
         intro: "img/anim-spiderman.gif",
-        introDuration: 3000
+        introDuration: 3000,
+        sticky: "img/anim-spiderman-telaranas.png"
     }
 };
+
+
+function setStickyOverlay(src) {
+
+    let overlay =
+        document.getElementById("folderStickyOverlay");
+
+
+    if (
+        !overlay
+    ) {
+
+        overlay =
+            document.createElement("img");
+
+
+        overlay.id =
+            "folderStickyOverlay";
+
+
+        overlay.className =
+            "sticky-overlay";
+
+
+        overlay.alt =
+            "";
+
+
+        document.body.appendChild(
+            overlay
+        );
+
+    }
+
+
+    if (
+        !src
+    ) {
+
+        overlay.classList.remove(
+            "show"
+        );
+
+
+        overlay.src =
+            "";
+
+        return;
+
+    }
+
+
+    overlay.src =
+        src;
+
+
+    overlay.classList.add(
+        "show"
+    );
+
+}
 
 
 function playIntroSwing(src, duration) {
@@ -1974,6 +2039,12 @@ function setThemedBackground(name) {
             "--theme-accent"
         );
 
+
+        setStickyOverlay(
+            null
+        );
+
+
         return;
 
     }
@@ -2012,6 +2083,17 @@ function setThemedBackground(name) {
     document.documentElement.style.setProperty(
         "--theme-accent",
         FOLDER_ACCENT_COLORS[slug] || DEFAULT_ACCENT_COLOR
+    );
+
+
+    const entryConfig =
+        FOLDER_ENTRY_ANIMATIONS[slug];
+
+
+    setStickyOverlay(
+        entryConfig && entryConfig.sticky
+            ? entryConfig.sticky
+            : null
     );
 
 }
