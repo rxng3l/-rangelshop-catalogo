@@ -3467,3 +3467,59 @@ footer {
     pointer-events: none;
 
 }
+
+
+/* =====================================================
+   ANIMACIÓN DE CRUCE (SWING)
+===================================================== */
+
+.intro-swing {
+
+    position: fixed;
+    top: 12%;
+    left: -260px;
+    width: 220px;
+    z-index: 5001;
+    pointer-events: none;
+    animation-name: swingAcross;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 2;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes swingAcross {
+
+    from {
+        left: -260px;
+    }
+
+    to {
+        left: 100%;
+    }
+
+}
+
+
+/* =====================================================
+   OVERLAY PEGAJOSO (TELARAÑAS, ETC.)
+===================================================== */
+
+.sticky-overlay {
+
+    position: fixed;
+    inset: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    display: none;
+
+}
+
+.sticky-overlay.show {
+
+    display: block;
+
+}
