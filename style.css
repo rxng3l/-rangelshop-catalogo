@@ -418,23 +418,6 @@ body.is-themed .results-count {
 }
 
 
-.hero-logo {
-
-    max-width:
-        360px;
-
-    width:
-        100%;
-
-    height:
-        auto;
-
-    margin-bottom:
-        26px;
-
-}
-
-
 .eyebrow {
 
     margin-bottom:
@@ -645,6 +628,20 @@ body.is-themed .results-count {
 
     pointer-events:
         none;
+
+}
+
+
+.hero-decoration-logo {
+
+    width:
+        100%;
+
+    max-width:
+        480px;
+
+    height:
+        auto;
 
 }
 
@@ -3084,14 +3081,6 @@ footer {
                 calc(100% - 28px),
                 1180px
             );
-
-    }
-
-
-    .hero-logo {
-
-        max-width:
-            260px;
 
     }
 
