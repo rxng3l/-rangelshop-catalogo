@@ -1447,6 +1447,104 @@ const products = [
             "Playera personalizada de Gignac.",
         sizes: ["M", "G", "XG"],
         colors: ["Negro"]
+    },
+
+
+    {
+        id: 125,
+        name: "Spiderman",
+        category: "Películas/Series",
+        price: 220,
+        image: "img/playera-125.jpg",
+        folder: "Spiderman",
+        description:
+            "Playera personalizada de Spiderman.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 126,
+        name: "Spiderman",
+        category: "Películas/Series",
+        price: 220,
+        image: "img/playera-126.jpg",
+        folder: "Spiderman",
+        description:
+            "Playera personalizada de Spiderman.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 127,
+        name: "Spiderman",
+        category: "Películas/Series",
+        price: 220,
+        image: "img/playera-127.jpg",
+        folder: "Spiderman",
+        description:
+            "Playera personalizada de Spiderman.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 128,
+        name: "Spiderman",
+        category: "Películas/Series",
+        price: 220,
+        image: "img/playera-128.jpg",
+        folder: "Spiderman",
+        description:
+            "Playera personalizada de Spiderman.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 129,
+        name: "Spiderman",
+        category: "Películas/Series",
+        price: 220,
+        image: "img/playera-129.jpg",
+        folder: "Spiderman",
+        description:
+            "Playera personalizada de Spiderman.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 130,
+        name: "Spiderman",
+        category: "Películas/Series",
+        price: 220,
+        image: "img/playera-130.jpg",
+        folder: "Spiderman",
+        description:
+            "Playera personalizada de Spiderman.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
+    },
+
+
+    {
+        id: 131,
+        name: "Spiderman",
+        category: "Películas/Series",
+        price: 220,
+        image: "img/playera-131.jpg",
+        folder: "Spiderman",
+        description:
+            "Playera personalizada de Spiderman.",
+        sizes: ["M", "G", "XG"],
+        colors: ["Negro"]
     }
 
 ];
