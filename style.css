@@ -600,7 +600,10 @@ body.is-themed .results-count {
         -90px;
 
     top:
-        25px;
+        50%;
+
+    transform:
+        translateY(-50%);
 
     width:
         650px;
