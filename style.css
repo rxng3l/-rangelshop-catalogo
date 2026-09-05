@@ -228,6 +228,20 @@ body.is-themed .results-count {
 }
 
 
+.brand-logo {
+
+    height:
+        42px;
+
+    width:
+        auto;
+
+    display:
+        block;
+
+}
+
+
 .brand-symbol {
 
     font-weight:
@@ -400,6 +414,23 @@ body.is-themed .results-count {
 
     z-index:
         2;
+
+}
+
+
+.hero-logo {
+
+    max-width:
+        360px;
+
+    width:
+        100%;
+
+    height:
+        auto;
+
+    margin-bottom:
+        26px;
 
 }
 
@@ -3053,6 +3084,22 @@ footer {
                 calc(100% - 28px),
                 1180px
             );
+
+    }
+
+
+    .hero-logo {
+
+        max-width:
+            260px;
+
+    }
+
+
+    .brand-logo {
+
+        height:
+            34px;
 
     }
 
